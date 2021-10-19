@@ -1,0 +1,30 @@
+:root,
+.std-theme {
+    --std-text-size-min: .8rem;
+    --std-text-small-size: calc(.9 * var(--std-text-size-min));
+    --std-text-body2-size: calc(1 * var(--std-text-size-min));
+    --std-text-body1-size: calc(1.25 * var(--std-text-body2-size));
+    --std-text-caption-size: calc(1 * var(--std-text-body1-size));
+    --std-text-button-size: calc(1 * var(--std-text-body1-size));
+    --std-text-overline-size: calc(1 * var(--std-text-body1-size));
+    --std-text-subtitle2-size: calc(1 * var(--std-text-body1-size));
+    --std-text-subtitle1-size: calc(1.25 * var(--std-text-subtitle2-size));
+    --std-text-h6-size: calc(1.25 * var(--std-text-subtitle1-size));
+    --std-text-h5-size: calc(1.25 * var(--std-text-h6-size));
+    --std-text-h4-size: calc(1.25 * var(--std-text-h5-size));
+    --std-text-h3-size: calc(1.25 * var(--std-text-h4-size));
+    --std-text-h2-size: calc(1.25 * var(--std-text-h3-size));
+    --std-text-h1-size: calc(1.25 * var(--std-text-h2-size));
+    --std-text-display2-size: calc(1.25 * 1.25 * var(--std-text-h1-size));
+    --std-text-display1-size: calc(1.25 * var(--std-text-display2-size));
+
+    --std-weight-thin: 200;
+    --std-weight-light: calc(var(--std-weight-thin) + 100);
+    --std-weight-regular: calc(var(--std-weight-light) + 100);
+    --std-weight-medium: calc(var(--std-weight-regular) + 100);
+    --std-weight-bold: calc(var(--std-weight-medium) + 100);
+
+    font-family: var(--std-font-primary);
+    font-size: var(--std-text-body1-size);
+    font-weight: var(--std-weight-regular);
+}

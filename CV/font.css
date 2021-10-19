@@ -1,0 +1,150 @@
+:root,
+.std-theme {
+    --std-font-primary: 'std-font-primary', Roboto, Futura, Arial, sans-serif;
+}
+
+/* Regular */
+
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/1_Hairline.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/2_Ultra_Thin.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/3_Thin.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/4_Light.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/5_Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/6_Medium.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/7_Semi_Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/8_Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/9_Extra_Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: normal;
+    font-weight: 1000;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/10_Black.otf') format('opentype');
+}
+
+/* Italic */
+
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: italic;
+    font-weight: 100;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/Italic/1_Hairline.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: italic;
+    font-weight: 200;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/Italic/2_Ultra_Thin.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/Italic/3_Thin.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/Italic/4_Light.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/Italic/5_Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/Italic/6_Medium.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/Italic/7_Semi_Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: italic;
+    font-weight: 800;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/Italic/8_Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/Italic/9_Extra_Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'std-font-primary';
+    font-style: italic;
+    font-weight: 1000;
+    font-display: swap;
+    src: url('./font-Sharp_Sans_No1/Italic/10_Black.otf') format('opentype');
+}

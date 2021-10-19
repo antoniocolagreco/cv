@@ -1,0 +1,29 @@
+{
+    "name": "@evilcss/std",
+    "version": "1.0.1",
+    "files": [
+        "/LICENSE.txt",
+        "/**/*.css",
+        "/*/*.woff"
+    ],
+    "scripts": {
+        "build": ""
+    },
+    "author": "Daniele Orlando",
+    "license": "BSD-2-Clause",
+    "description": "Awesome CSS design system and UI widgets",
+    "keywords": [
+        "CSS",
+        "UI",
+        "Design System",
+        "Widgets"
+    ],
+    "homepage": "https://github.com/evilrepo/evilcode",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/evilrepo/evilcode.git"
+    },
+    "bugs": {
+        "url": "https://github.com/evilrepo/evilcode/issues"
+    }
+}

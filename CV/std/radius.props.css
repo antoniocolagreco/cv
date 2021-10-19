@@ -1,0 +1,10 @@
+:root,
+.std-theme {
+    --std-radius-mini: 4px;
+    --std-radius-xs: 6px;
+    --std-radius-s: 8px;
+    --std-radius-m: 12px;
+    --std-radius-l: 16px;
+    --std-radius-xl: 20px;
+    --std-radius-maxi: 26px;
+}

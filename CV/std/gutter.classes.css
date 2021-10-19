@@ -1,0 +1,27 @@
+.std-spacer {
+    flex-grow: 1;
+}
+
+.std-space-h {
+    display: inline-block;
+    height: 100%;
+    min-width: 1em;
+    width: 1em;
+    max-width: 1em;
+}
+.std-space-v {
+    display: block;
+    width: 100%;
+    min-height: 1em;
+    height: 1em;
+    max-height: 1em;
+}
+.std-space-h.mini, .std-space-v.mini { font-size: var(--std-gutter-mini); }
+.std-space-h.xxs, .std-space-v.xxs { font-size: var(--std-gutter-xxs); }
+.std-space-h.xs, .std-space-v.xs { font-size: var(--std-gutter-xs); }
+.std-space-h.s, .std-space-v.s { font-size: var(--std-gutter-s); }
+.std-space-h.m, .std-space-v.m { font-size: var(--std-gutter-m); }
+.std-space-h.l, .std-space-v.l { font-size: var(--std-gutter-l); }
+.std-space-h.xl, .std-space-v.xl { font-size: var(--std-gutter-xl); }
+.std-space-h.xxl, .std-space-v.xxl { font-size: var(--std-gutter-xxl); }
+.std-space-h.maxi, .std-space-v.maxi { font-size: var(--std-gutter-maxi); }

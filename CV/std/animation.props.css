@@ -1,0 +1,8 @@
+:root,
+.std-theme {
+    --std-duration-flash: .1s;
+    --std-duration-fast: .2s;
+    --std-duration-normal: .3s;
+    --std-duration-slow: .5s;
+    --std-duration-slower: .7s;
+}

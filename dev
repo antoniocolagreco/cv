@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+__dir__=$(cd "$(dirname "$0")" && pwd)
+
+exec npx browser-sync start                     \
+        --cwd "$__dir__"                        \
+        --server                                \
+        --host 0.0.0.0                          \
+        --port 8000                             \
+        ---serveStatic "$__dir__"               \
+        --startPath '/CV.html'                  \
+        --watch                                 \
+        --files 'CV.html, CV/**/*.css'          \
+        --no-notify

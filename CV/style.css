@@ -1,242 +1,248 @@
 /* Shared *********************************************************************/
 :root {
-    --page-gutter: 1.8cm;
-    --page-inner-gutter: 1.0cm;
-    font-size: 10pt;
-    --std-color-primary-h: 20deg;
-    --std-color-primary-s: 50%;
-    --std-color-primary-l: 50%;
-    --std-color-secondary-h: 200deg;
-    --std-color-secondary-s: 50%;
-    --std-color-secondary-l: 50%;
+  --page-gutter: 1.8cm;
+  --page-inner-gutter: 1cm;
+  font-size: 10pt;
+  --std-color-primary-h: 20deg;
+  --std-color-primary-s: 50%;
+  --std-color-primary-l: 50%;
+  --std-color-secondary-h: 200deg;
+  --std-color-secondary-s: 50%;
+  --std-color-secondary-l: 50%;
 }
 
 /* Window *********************************************************************/
 
 html {
-    display: flex;
-    justify-content: center;
-    background-color: var(--std-color-primary-accent);
+  display: flex;
+  justify-content: center;
+  background-color: var(--std-color-primary-accent);
 }
 
 body {
-    position: relative;
-    display: inline-block;
-    margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 /* Grid ***********************************************************************/
 
 #GridSystem {
-    --gap: 2px;
-    pointer-events: none;
-    display: flex;
-    gap: var(--gap);
-    padding: 0 var(--gap);
+  --gap: 2px;
+  pointer-events: none;
+  display: flex;
+  gap: var(--gap);
+  padding: 0 var(--gap);
 }
 #GridSystem.off {
-    display: none;
+  display: none;
 }
 #GridSystem > * {
-    flex: 1 0 0;
-    text-align: center;
-    background-color: hsla(0deg 100% 50% / .03);;
+  flex: 1 0 0;
+  text-align: center;
+  background-color: hsla(0deg 100% 50% / 0.03);
 }
 
 /* Page ***********************************************************************/
 
 .Page {
-    width: 21cm;
-    height: 30cm;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    page-break-after: always;
-    padding: var(--page-gutter);
-    background-image: linear-gradient(to right,
-        var(--std-color-bg1) 0%,
-        var(--std-color-bg1) 50%,
-        var(--std-color-bg2) 50%,
-        var(--std-color-bg2) 100%
-    );
+  width: 21cm;
+  height: 30cm;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  page-break-after: always;
+  padding: var(--page-gutter);
+  background-image: linear-gradient(
+    to right,
+    var(--std-color-bg1) 0%,
+    var(--std-color-bg1) 50%,
+    var(--std-color-bg2) 50%,
+    var(--std-color-bg2) 100%
+  );
 }
 .Page {
-    border-bottom: 1px solid var(--std-color-primary-accent);
+  border-bottom: 1px solid var(--std-color-primary-accent);
 }
 @media print {
-    .Page {
-        border-bottom: unset;
-    }
+  .Page {
+    border-bottom: unset;
+  }
 }
 
 .Column {
-    display: inline-block;
-    width: 50%;
-    max-width: 50%;
+  display: inline-block;
+  width: 50%;
+  max-width: 50%;
 }
 .Column.One {
-    float: left;
-    padding-inline-end: var(--page-inner-gutter);
+  float: left;
+  padding-inline-end: var(--page-inner-gutter);
 }
 .Column.Two {
-    float: right;
-    padding-inline-start: var(--page-inner-gutter);
+  float: right;
+  padding-inline-start: var(--page-inner-gutter);
 }
 
 article {
-    background-color: var(--std-color-bg1);
+  background-color: var(--std-color-bg1);
 }
 
 aside {
-    background-color: var(--std-color-bg2);
+  background-color: var(--std-color-bg2);
 }
 
 .Contacts {
-    display: flex;
-    justify-content: center;
-    font-size: var(--std-text-body1-size);
-    font-weight: var(--std-weight-bold);
-    color: var(--std-color-primary-accent);
+  display: flex;
+  justify-content: center;
+  font-size: var(--std-text-body1-size);
+  font-weight: var(--std-weight-bold);
+  color: var(--std-color-primary-accent);
 }
 
 .Contacts svg {
-    margin-inline-end: .5em;
+  margin-inline-end: 0.5em;
 }
 
 .Email,
 .Phone {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .Header {
-    margin-top: 4em;
-    margin-bottom: 4em;
-    display: flex;
-    justify-content: flex-end;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .Avatar {
-    flex-grow: 1;
-    height: 10em;
-    border-radius: 10em;
-    margin-right: var(--page-inner-gutter);
+  /* flex-grow: 1;
+  height: 20em;
+  border-radius: 10em;
+  margin-right: var(--page-inner-gutter); */
+
+  flex-shrink: 1;
+  height: 14em;
+  border-radius: 10em;
+  margin-right: 6em;
 }
 
 .Name {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .Name > * {
-    line-height: 1;
-    letter-spacing: -.01em;
-    text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
 }
 .Name .First {
-    font-weight: var(--std-weight-thin);
+  font-weight: var(--std-weight-thin);
 }
 .Name .Last {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .Role {
-    align-self: center;
-    display: inline-block;
-    margin-top: .4em;
-    padding: .4em 1.5em;
-    font-size: var(--std-text-h6-size);
-    letter-spacing: .05em;
-    text-transform: uppercase;
-    color: var(--std-color-bg1);
-    background-color: var(--std-color-fg1);
+  align-self: center;
+  display: inline-block;
+  margin-top: 0.4em;
+  padding: 0.4em 1.5em;
+  font-size: var(--std-text-h6-size);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--std-color-bg1);
+  background-color: var(--std-color-fg1);
 }
 
 .Section {
-    margin-bottom: 3em;
+  margin-bottom: 3em;
 }
 
 .Title {
-    position: relative;
-    margin-bottom: .4em;
-    font-size: var(--std-text-subtitle1-size);
-    line-height: 1.8;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--std-color-primary-accent);
+  position: relative;
+  margin-bottom: 0.4em;
+  font-size: var(--std-text-subtitle1-size);
+  line-height: 1.8;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--std-color-primary-accent);
 }
 .Title::after {
-    content: '';
-    position: absolute;
-    display: block;
-    bottom: 0;
-    left: -.5em;
-    width: 3em;
-    height: 0;
-    border-bottom: 1px solid var(--std-color-primary-accent);
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: -0.5em;
+  width: 3em;
+  height: 0;
+  border-bottom: 1px solid var(--std-color-primary-accent);
 }
 
 .SubTitle {
-    font-size: var(--std-text-body2-size);
-    text-transform: uppercase;
-    font-weight: 700;
-    color: var(--std-color-primary-tone3);
-    margin-top: .4em;
-    margin-bottom: .3em;
-    letter-spacing: .1em;
+  font-size: var(--std-text-body2-size);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--std-color-primary-tone3);
+  margin-top: 0.4em;
+  margin-bottom: 0.3em;
+  letter-spacing: 0.1em;
 }
 
 .Body {
-    color: var(--std-color-fg2);
-    letter-spacing: .03em;
-    text-align: justify;
+  color: var(--std-color-fg2);
+  letter-spacing: 0.03em;
+  text-align: justify;
 }
 
 .Experience {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .ExperiencePeriod {
-    font-size: var(--std-text-body2-size);
-    font-weight: var(--std-weight-medium);
-    text-transform: uppercase;
-    color: var(--std-color-fg3);
+  font-size: var(--std-text-body2-size);
+  font-weight: var(--std-weight-medium);
+  text-transform: uppercase;
+  color: var(--std-color-fg3);
 }
 
 .ExperienceName {
-    margin-bottom: .1em;
-    font-size: var(--std-text-h6-size);
-    font-weight: 700;
-    color: var(--std-color-fg2);
+  margin-bottom: 0.1em;
+  font-size: var(--std-text-h6-size);
+  font-weight: 700;
+  color: var(--std-color-fg2);
 }
 
 .ExperienceRole {
-    margin-bottom: .5em;
-    font-size: var(--std-text-subtitle2-size);
-    font-weight: 700;
-    color: var(--std-color-fg2);
+  margin-bottom: 0.5em;
+  font-size: var(--std-text-subtitle2-size);
+  font-weight: 700;
+  color: var(--std-color-fg2);
 }
 
 .TagsGroup {
-    margin-top: .6em;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    font-size: var(--std-text-body1-size);
-    font-weight: var(--std-weight-bold);
+  margin-top: 0.6em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: var(--std-text-body1-size);
+  font-weight: var(--std-weight-bold);
 }
 
 .Tag {
-    border-bottom: 1px solid var(--std-color-primary-accent);
-    padding: .2em 0;
-    margin-right: 1em;
+  border-bottom: 1px solid var(--std-color-primary-accent);
+  padding: 0.2em 0;
+  margin-right: 1em;
 }
 
 .Why {
-    display: flex;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 .Why.Body {
-    line-height: 1.8;
+  line-height: 1.8;
 }

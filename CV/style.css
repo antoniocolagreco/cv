@@ -146,6 +146,7 @@ aside {
     margin-top: .4em;
     padding: .4em 1.5em;
     font-size: var(--std-text-h6-size);
+    font-weight: var(--std-weight-medium);
     letter-spacing: .05em;
     text-transform: uppercase;
     color: var(--std-color-bg1);
@@ -158,9 +159,10 @@ aside {
 
 .Title {
     position: relative;
-    margin-bottom: .4em;
+    margin-bottom: .8em;
     font-size: var(--std-text-subtitle1-size);
     line-height: 1.8;
+    letter-spacing: .1em;
     font-weight: 700;
     text-transform: uppercase;
     color: var(--std-color-primary-accent);

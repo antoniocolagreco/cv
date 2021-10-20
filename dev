@@ -8,7 +8,7 @@ exec npx browser-sync start                     \
         --host 0.0.0.0                          \
         --port 8000                             \
         ---serveStatic "$__dir__"               \
-        --startPath '/CV.html'                  \
+        --startPath '/index.html'               \
         --watch                                 \
-        --files 'CV.html, CV/**/*.css'          \
+        --files 'index.html, CV/**/*.css'       \
         --no-notify

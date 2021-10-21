@@ -3,7 +3,7 @@
     --page-gutter: 1.8cm;
     --page-inner-gutter: 1.0cm;
     font-size: 10pt;
-    --std-color-primary-h: 20deg;
+    --std-color-primary-h: 230deg;
     --std-color-primary-s: 50%;
     --std-color-primary-l: 50%;
     --std-color-secondary-h: 200deg;
@@ -34,7 +34,7 @@ body {
     gap: var(--gap);
     padding: 0 var(--gap);
 }
-#GridSystem.off {
+#GridSystem[off] {
     display: none;
 }
 #GridSystem > * {

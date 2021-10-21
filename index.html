@@ -33,7 +33,7 @@
     <body class="std-theme light">
         <!-- Grid ------------------------------------------------------------->
 
-        <div id="GridSystem" class="std-layer off">
+        <div id="GridSystem" class="std-layer" off>
             <div></div>
             <div></div>
             <div></div>
@@ -72,7 +72,11 @@
             </div>
 
             <header class="Header">
-                <image class="Avatar std-media-cover" src="./CV/Avatar.jpg"/>
+                <image
+                    class="Avatar std-media-cover"
+                    src="./CV/Avatar.jpg"
+                    style="visibility: hidden;"
+                />
 
                 <div class="Name">
                     <h1 class="First">
@@ -94,12 +98,12 @@
                     </h3>
                     <p class="Body">
                         I'm a curious person always seeking for new opportunities
-                        of building challenging and useful things. I believe
+                        of building interesting and useful things. I believe
                         that change is a constant of life and I always push
-                        myself to adapt and to embrace it as an opportunity
-                        to be a better person. I know that by myself I can succeed
-                        in any goal I set, but at the same time I know that people
-                        around me enrich me and help me in this journey.
+                        myself to adapt embracing it as an opportunity for new
+                        discoveries. By myself I can succeed in any goal I set,
+                        but I like to have people around me whom enrich me and
+                        help me in this journey.
                     </p>
                 </div>
                 <div class="Column Two">
@@ -129,8 +133,7 @@
                         Education
                     </div>
                     <p class="Body">
-                        <b>Specializzazione in Informatica</b>
-                        <br/>
+                        <b>Specializzazione in Informatica</b><br/>
                         Istituto Tecnico Industriale Statale di Chieti
                     </p>
 
@@ -155,23 +158,22 @@
                     <h6 class="ExperiencePeriod">
                         2008 — 2011
                     </h6>
-                    <h4 class="ExperienceName">
-                        RARA System
-                    </h4>
-                    <h5 class="ExperienceRole">
-                        Sviluppatore Software Fullstack
-                    </h5>
-                    <p class="Body Column One">
-                        In qualità di Sviluppatore Software, mi sono occupato
-                        di sviluppare applicazioni web con <b>pattern MVC</b>
-                        per clienti nel settore pubblico e bancario.
-                        Ho sviluppato il <b>sito web</b> pubblico dell'azienda ed
-                        ho contribuito alla realizzazione dei Totem Informativi
-                        per la prenotazione di prestazioni mediche all'interno
-                        degli ospedali. Mi sono anche occupato dello <b>sviluppo
-                        del framework</b> aziendale utilizzato per la realizzazione
-                        delle applicazioni web.
-                    </p>
+                    <div class="Column One">
+                        <h4 class="ExperienceName">
+                            RARA System
+                        </h4>
+                        <h5 class="ExperienceRole">
+                            Fullstack Software Developer
+                        </h5>
+                        <p class="Body">
+                            <b>Web Application</b> development, using <b>MVC</b> pattern,
+                            for clients in the public and banking sector.<br/>
+                            Informative Totem development for health care services
+                            within hospitals.<br/>
+                            <b>Web Framework</b> development used by my company for
+                            building web applications.
+                        </p>
+                    </div>
                     <div class="Tags Column Two">
                         <ul class="TagsGroup">
                             <li class="Tag">Java</li>
@@ -188,6 +190,7 @@
                         </ul>
                         <ul class="TagsGroup">
                             <li class="Tag">Spring</li>
+                            <li class="Tag">Seam</li>
                             <li class="Tag">Hibernate</li>
                             <li class="Tag">SQL</li>
                             <li class="Tag">MySQL</li>
@@ -217,10 +220,10 @@
                             CheAutoRicambi
                         </h4>
                         <h5 class="ExperienceRole">
-                            CoProprietario
+                            Co-Owner
                         </h5>
                         <p class="Body">
-                            Vendita al dettaglio ed online di ricambi per autoveicoli.
+                            Retail and online selling of automotive spare parts.
                         </p>
                     </div>
                     <div class="Experience">
@@ -231,10 +234,10 @@
                             CheAuto
                         </h4>
                         <h5 class="ExperienceRole">
-                            CoProprietario
+                            Co-Owner
                         </h5>
                         <p class="Body">
-                            Vendita di autoveicoli.
+                            Selling of automotive vehicles.
                         </p>
                     </div>
                     <div class="Experience">
@@ -245,11 +248,11 @@
                             ITS Antonio Colagreco
                         </h4>
                         <h5 class="ExperienceRole">
-                            Socio Unico
+                            Owner
                         </h5>
                         <p class="Body">
-                            Assistenza tecnica informatica per aziende e privati.
-                            Cablaggio ed installazione reti di comunicazione.
+                            IT technical assistance for companies and private.<br/>
+                            Wiring and installation of office networks.
                         </p>
                     </div>
                     <div class="Experience">
@@ -260,22 +263,34 @@
                             Samo Informatica Srl
                         </h4>
                         <h5 class="ExperienceRole">
-                            Socio CoFondatore
+                            Co-Founder
                         </h5>
                         <p class="Body">
-                            Vendita al dettaglio di componentistica per computer.
-                            Assemblaggio ed assistenza tecnica per computer.
+                            Retail selling of personal computer parts.<br/>
+                            Computer assembly and technical assistance.
                         </p>
                     </div>
                 </div>
                 <div class="Why Body Column Two">
                     At certain point in my life I decided to step back from my
                     career as Software Developer to help my family with
-                    the family's company. I did it with pleasure and I regret
-                    nothing about this experience, but it was not making me
-                    realized as man and it was not my way.
+                    their own company. I did it with pleasure and I regret
+                    nothing about this experience but, it was not my way.
                 </div>
             </section>
+
+            <i class="std-spacer"></i>
+
+            <div class="Contacts">
+                <div class="Email">
+                    <svg class="std-icon fluid" viewBox="0 0 10 10" role="presentation">
+                        <use xlink:href="#EmailIcon"/>
+                    </svg>
+                    <label>
+                        linkedin.com/in/antonio-colagreco-956b0835
+                    </label>
+                </div>
+            </div>
         </article>
     </body>
 </head>

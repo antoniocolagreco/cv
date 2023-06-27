@@ -1,8 +1,11 @@
 import { Metadata } from 'next';
 import { FC, ReactNode } from 'react';
 
-export type LayoutProps<Params = {}> = { children: ReactNode; params: Params }
-export type PageProps<Params = {}, SearchParams = {}> = { params: Params; searchParams: SearchParams }
+export type DefaultLayoutParams = { children: ReactNode; params: Params }
+export type DefaultPageParams = { params: Params; searchParams: SearchParams }
+
+export type LayoutProps<Params = DefaultLayoutParams> = DefaultLayoutParams
+export type PageProps<Params = DefaultPageParams, SearchParams = {}> = DefaultPageParams
 export type ErrorPageProps = { error: Error; reset: () => void }
 export type StaticPaths<Params = {}> = { params?: Params }
 

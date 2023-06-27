@@ -9,12 +9,12 @@ html {
 
 @media (prefers-color-scheme: light) {
   html {
-    background: radial-gradient(#fde68a, #f9fafb);
+    background: radial-gradient(#fef3c7, #ffffff);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   html {
-    background: radial-gradient(#fde68a, #f9fafb);
+    background: radial-gradient(#fef3c7, #ffffff);
   }
 }

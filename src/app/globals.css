@@ -18,3 +18,7 @@ html {
     background: radial-gradient(#fef3c7, #ffffff);
   }
 }
+
+.bright-shadow {
+  box-shadow: -0.25rem 0.25rem #f59e0b;
+}

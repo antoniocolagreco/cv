@@ -15,8 +15,10 @@ const Contacts: FC<ContactsProps> = (props) => {
   const locale = useContext(LocaleContext).locale
 
   return (
-    <section className='text-sky-50 rounded-2xl shrink-0 p-4 fill-sky-700 bg-gradient-to-tl from-sky-700 to-sky-600 '>
-      <div className='flex flex-col gap-4'>
+    <section
+      className={`text-sky-50 rounded-2xl shrink-0 p-4 fill-sky-700 bg-gradient-to-tl from-sky-700 to-sky-600 ${className}`}
+    >
+      <div className='grid gap-4 grid-cols-[repeat(auto-fill,_minmax(16rem,_1fr))] sm:grid-cols-[repeat(auto-fill,_minmax(18rem,_1fr))]'>
         <ContactLink href={`mailto:${locale.mail_1}`}>
           <Badge className='bg-white'>
             <AltMailIcon width={36} />

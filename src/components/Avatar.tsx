@@ -1,10 +1,14 @@
-import { FC, ImgHTMLAttributes } from 'react'
+import { FC, HTMLAttributes } from 'react'
 
-type AvatarProps = ImgHTMLAttributes<HTMLImageElement> & {}
+type AvatarProps = HTMLAttributes<HTMLElement> & {}
 
 const Avatar: FC<AvatarProps> = (props) => {
-  const { src, ...otherProps } = props
-  return <img src={imageData} {...otherProps} />
+  const { className, ...otherProps } = props
+  return (
+    <figure className={`rounded-2xl border-4 border-sky-600 ${className}`} {...otherProps}>
+      <img src={imageData} className='rounded-xl m-1' width={120}/>
+    </figure>
+  )
 }
 
 export default Avatar

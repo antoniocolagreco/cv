@@ -11,7 +11,7 @@ const ContactLink: FC<ContactLinkProps> = (props) => {
   return (
     <Link
       href={href}
-      className={`group flex items-center transition-all fill-sky-600 hover:fill-amber-600  text-sky-50 hover:text-amber-300 text-sm sm:text-base ${className}`}
+      className={`group flex items-center transition-all fill-sky-600 hover:fill-amber-600 text-sky-50 hover:text-amber-300 text-sm sm:text-base ${className}`}
       {...otherProps}
     >
       {children}

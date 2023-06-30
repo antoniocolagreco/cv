@@ -1,8 +1,8 @@
 import { FC, HTMLAttributes } from 'react'
 
-type BadgeProps = HTMLAttributes<HTMLDivElement> & {}
+type SimpleBadgeProps = HTMLAttributes<HTMLDivElement> & {}
 
-const Badge: FC<BadgeProps> = (props) => {
+const SimpleBadge: FC<SimpleBadgeProps> = (props) => {
   const { children, className = '', ...otherProps } = props
   return (
     <div className={`rounded-xl inline-flex w-12 h-12 items-center justify-center mr-4 ${className}`} {...otherProps}>
@@ -11,4 +11,4 @@ const Badge: FC<BadgeProps> = (props) => {
   )
 }
 
-export default Badge
+export default SimpleBadge

@@ -22,3 +22,10 @@ html {
 .bright-shadow {
   box-shadow: -0.25rem 0.25rem #f59e0b;
 }
+
+@media print {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+}

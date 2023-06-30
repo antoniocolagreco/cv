@@ -13,7 +13,7 @@ import ReactIcon from '../../icons/ReactIcon'
 import SkillsIcon from '../../icons/SkillsIcon'
 import TailwindIcon from '../../icons/Tailwind'
 import TypescriptIcon from '../../icons/TypescriptIcon'
-import Badge from '../Badge/Badge'
+import DecoratedBadge from '../DecoratedBadge/DecoratedBadge'
 import SkillBadge from '../SkillBadge/SkillBadge'
 
 type SkillsProps = HTMLAttributes<HTMLElement> & {}
@@ -23,14 +23,14 @@ const Skills: FC<SkillsProps> = (props) => {
   const locale = useContext(LocaleContext).locale
 
   return (
-    <section className='fill-sky-700'>
-      <div className='flex items-center'>
-        <Badge className='bg-sky-700 fill-white'>
+    <section className={`fill-sky-700 ${className}`}>
+      <div className='flex items-center mb-8 justify-center'>
+        <DecoratedBadge className='bg-sky-700 fill-white'>
           <SkillsIcon width={36} />
-        </Badge>
-        <h3 className='text-3xl text-sky-700 font-bold'>{locale.skills}</h3>
+        </DecoratedBadge>
+        <h3 className='text-2xl text-sky-700 font-bold'>{locale.skills}</h3>
       </div>
-      <div className='flex gap-4 my-4 flex-wrap text-neutral-800 font-semibold'>
+      <div className='flex gap-4 flex-wrap text-neutral-800 font-semibold px-4 justify-center'>
         <SkillBadge className='border-black'>
           <NextJSIcon className='fill-black' width={24} />
           Next.js

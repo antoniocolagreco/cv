@@ -12,6 +12,7 @@ import ProblemSolvingIcon from '../../icons/ProblemSolvingIcon'
 import ReactIcon from '../../icons/ReactIcon'
 import SkillsIcon from '../../icons/SkillsIcon'
 import TailwindIcon from '../../icons/Tailwind'
+import TimeIcon from '../../icons/TimeIcon'
 import TypescriptIcon from '../../icons/TypescriptIcon'
 import DecoratedBadge from '../DecoratedBadge/DecoratedBadge'
 import SkillBadge from '../SkillBadge/SkillBadge'
@@ -30,7 +31,7 @@ const Skills: FC<SkillsProps> = (props) => {
         </DecoratedBadge>
         <h3 className='text-2xl text-sky-700 font-bold'>{locale.skills}</h3>
       </div>
-      <div className='flex gap-4 flex-wrap text-neutral-800 font-semibold px-4 justify-center'>
+      <div className='flex gap-4 flex-wrap text-neutral-800 font-semibold px-4 justify-center items-start'>
         <SkillBadge className='border-black'>
           <NextJSIcon className='fill-black' width={24} />
           Next.js
@@ -78,6 +79,10 @@ const Skills: FC<SkillsProps> = (props) => {
         <SkillBadge className='border-pink-600 bg-white'>
           <CreativityIcon className='fill-pink-600' width={24} />
           {locale.creative_thinking}
+        </SkillBadge>
+        <SkillBadge className='border-amber-600 bg-white'>
+          <TimeIcon className='fill-amber-600' width={24} />
+          {locale.time_management}
         </SkillBadge>
       </div>
     </section>

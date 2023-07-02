@@ -19,7 +19,7 @@ const RootLayout: Layout = async (props) => {
   return (
     <LocaleProvider>
       <html className={font.className} lang={locale.language}>
-        <body className=''>{children}</body>
+        <body>{children}</body>
       </html>
     </LocaleProvider>
   )

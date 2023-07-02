@@ -3,6 +3,7 @@ import { Page, PageProps } from '@/types/next'
 import { useContext } from 'react'
 import Avatar from '../components/Avatar/Avatar'
 import Contacts from '../components/Contacts/Contacts'
+import PastBackgroundCurve from '../components/Decorations/PastBackgroundCurve'
 import ProjectsBackgroundCurve from '../components/Decorations/ProjectsBackgroundCurve'
 import TopBackgroundCurve from '../components/Decorations/TopBackgroundCurve'
 import Education from '../components/Education/Education'
@@ -10,6 +11,7 @@ import Languages from '../components/Languages/Languages'
 import ProjectItem from '../components/ProjectItem/ProjectItem'
 import Projects from '../components/Projects/Projects'
 import Skills from '../components/Skills/Skills'
+import WorkExperience from '../components/WorkExperience/WorkExperience'
 import { LocaleContext } from '../context/Locale'
 
 type Props = PageProps & {}
@@ -20,8 +22,8 @@ const AppPage: Page<Props> = (props) => {
     <div className='max-w-screen-lg mx-auto lg:my-8 shadow-2xl bg-white border border-gray-200 text-neutral-900 relative rounded overflow-hidden'>
       <TopBackgroundCurve
         className='absolute top-0 left-0 right-0 pointer-events-none'
-        path_1_className='fill-amber-500'
-        path_2_className='fill-sky-600'
+        secondaryClassName='fill-amber-500'
+        mainClassName='fill-sky-600'
         height='200px'
         width='100%'
       />
@@ -45,11 +47,11 @@ const AppPage: Page<Props> = (props) => {
             <Education className='grow' />
           </div>
         </div>
-        <div className='relative pt-20'>
+        <div className='relative pt-24'>
           <ProjectsBackgroundCurve
             className='absolute top-0 left-0 right-0 pointer-events-none'
-            path_1_className='fill-green-600'
-            path_2_className='fill-emerald-700'
+            secondaryClassName='fill-green-600'
+            mainClassName='fill-sky-700'
             height='600px'
             width='100%'
           />
@@ -74,6 +76,24 @@ const AppPage: Page<Props> = (props) => {
               inverted
             />
           </Projects>
+        </div>
+        <div className='relative pt-20'>
+          <PastBackgroundCurve
+            className='absolute top-0 left-0 right-0 pointer-events-none'
+            secondaryClassName='fill-rose-500'
+            mainClassName='fill-sky-700'
+            height='600px'
+            width='100%'
+          />
+          <WorkExperience className='px-4 sm:px-8 relative'>
+            <div className='border-4 rounded-2xl p-4 border-rose-500 bg-gradient-to-tl from-zinc-50 to-white'>
+              <h4 className='text-2xl font-bold'>{locale.job_6.company_name}</h4>
+              <h5>{locale.job_6.role}</h5>
+              <p>{locale.job_6.date}</p>
+              <p>{locale.job_6.description}</p>
+            </div>
+          </WorkExperience>
+          <div className='h-[100rem]'></div>
         </div>
       </main>
     </div>

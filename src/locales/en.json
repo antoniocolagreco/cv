@@ -33,39 +33,39 @@
   "a2a_project_description": "Through a collaboration with hinto.com, I developed numerous frontend components for the website using Gatsby and React. This project involved a team of several individuals, and we utilized Figma and Jira for seamless collaboration. The result is a visually appealing and highly functional website that showcases the expertise and dedication of the team.",
   "work_experience": "Work Experience",
   "job_1": {
-    "company_name": "Samo Informatica SRL",
     "role": "Co-Founder",
-    "date": "Computers and components retailer providing professional assembly and technical support services. The company expertise also extended to installing and configuring small-scale business networks.",
-    "description": "2002 — 2005"
+    "company_name": "Samo Informatica SRL",
+    "description": "Computers and components retailer providing professional assembly and technical support services. The company expertise also extended to installing and configuring small-scale business networks. The original company with a business partner in place of one employee.",
+    "date": "2002 — 2005"
   },
   "job_2": {
-    "company_name": "ITS di Antonio Colagreco",
     "role": "Founder",
-    "description": "Computers and components retailer providing professional assembly and technical support services. The company expertise also extended to installing and configuring small-scale business networks. The same company with one less business partner but one employee.",
+    "company_name": "ITS di Antonio Colagreco",
+    "description": "Computers and components retailer providing professional assembly and technical support services. The company expertise also extended to installing and configuring small-scale business networks.",
     "date": "2005 — 2007"
   },
   "job_3": {
+    "role": "Fullstack Developer",
     "company_name": "RARA System SRL",
-    "role": "Fullstack developer",
     "date": "2008 — 2011",
     "description": "As a full-stack developer, I was responsible for developing web applications using the MVC pattern for clients in the public and banking sectors. One of my notable contributions was assisting in the creation of Information Kiosks for scheduling medical appointments within hospitals. Additionally, I played a crucial role in developing the company's in-house framework used for building all web applications. During this experience, I primarily worked with Java Server Faces, Spring and RichFaces."
   },
   "job_4": {
-    "company_name": "CheAuto SRL",
-    "role": "Family Business",
+    "role": "E-Commerce Specialist",
+    "company_name": "CheAuto SRL (Family Business)",
     "date": "2012 — 2016",
-    "description": "I was engaged in the sales of cars, primarily managing listings on platforms such as eBay.it and Subito.it. Additionally, I facilitated sales to customers who physically visited the dealership. I also handled accounting responsibilities as part of my role."
+    "description": "I was engaged in the sales of used cars, primarily managing listings on many online platforms. Additionally, I facilitated sales to customers who physically visited the dealership. I also handled accounting responsibilities as part of my role."
   },
   "job_5": {
-    "company_name": "CheAutoRicambi SRL",
-    "role": "Family Business",
+    "role": "E-Commerce Specialist",
+    "company_name": "CheAutoRicambi SRL (Family Business)",
     "date": "2016 — 2021",
-    "description": "My role was to sell spare parts on the eBay.it platform. My primary responsibilities included creating and managing listings, as well as coordinating logistics for shipments. I was also responsible for administrative tasks and accounting."
+    "description": "My role was to sell spare parts mainly on eBay.it and Subito.it. My primary responsibilities included creating and managing listings, as well as coordinating logistics for shipments. Another important aspect of my role was customer management and I was also responsible for administrative tasks and accounting."
   },
   "job_6": {
-    "company_name": "Antonio Colagreco",
-    "role": "Freelance Frontend Developer",
+    "role": "Frontend Developer",
+    "company_name": "Freelance",
     "date": "2021 — present",
-    "description": "While working in my family business, I had long decided to return to my initial professional field and had restarted my training journey through various courses on Udemy. And here we are now, developing web apps and sites."
+    "description": "While working as a sales assciotate, I had long decided to return to my initial professional field and had restarted my training journey through various courses on Udemy. And here we are now, developing web apps and sites."
   }
 }

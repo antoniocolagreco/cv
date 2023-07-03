@@ -27,7 +27,7 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
     ...otherProps
   } = props
   return (
-    <article className={`grid gap-x-8 md:gap-x-16 gap-y-4 px-4 ${className}`} {...otherProps}>
+    <article className={`grid gap-x-8 md:gap-x-16 gap-y-4 px-4 sm:mt-4 mt-12 first:mt-4 ${className}`} {...otherProps}>
       <Link
         href={url}
         target='_blank'
@@ -40,7 +40,7 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
       <Link
         href={url}
         target='_blank'
-        className={`sm:justify-self-start justify-self-center hover:scale-105 transition duration-300 py-4 peer-hover:scale-105 sm:row-span-2 row-span-1 ${
+        className={`sm:justify-self-start justify-self-center hover:scale-105 transition duration-300 peer-hover:scale-105 sm:row-span-2 row-span-1 ${
           inverted
             ? 'col-start-1 hover:rotate-1 peer-hover:rotate-1 sm:col-start-2'
             : 'hover:-rotate-1 peer-hover:-rotate-1'

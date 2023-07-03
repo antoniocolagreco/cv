@@ -1,12 +1,12 @@
 import { FC, SVGAttributes } from 'react'
 
-type ProjectsBackgroundCurveProps = SVGAttributes<SVGElement> & {
+type BottomBackgroundCurveProps = SVGAttributes<SVGElement> & {
   secondaryClassName?: string
   mainClassName?: string
 }
 
-const WorkBackgroundCurve: FC<ProjectsBackgroundCurveProps> = (props) => {
-  const { secondaryClassName = '', mainClassName = '', viewBox = '0 0 100 100', ...otherProps } = props
+const BottomBackgroundCurve: FC<BottomBackgroundCurveProps> = (props) => {
+  const { secondaryClassName = '', mainClassName = '', viewBox = '0 0 1000 200', ...otherProps } = props
   return (
     <svg xmlns='http://www.w3.org/2000/svg' viewBox={viewBox} preserveAspectRatio='none' {...otherProps}>
       <defs>
@@ -16,17 +16,16 @@ const WorkBackgroundCurve: FC<ProjectsBackgroundCurveProps> = (props) => {
         </linearGradient>
       </defs>
       <path
-        d='M0 0 C 35 25, 70 3, 100 8 L 100 35 C 75 15, 25 25, 0 70 L 0 50 Z'
+        d='M0,82.5C404.7-64.3,291.5,205.1,692,50c207.7-80.5,288.7,26.4,308,44.9V200H0V82.5z'
         className={secondaryClassName}
-        fill='url(#gradient)'
       />
       <path
-        d='M0 5 C 35 20, 70 5, 100 10 L 100 35 C 75 15, 25 25, 0 60 L 0 50 Z'
-        className={mainClassName}
+        d='M0,102.6C416.4-53.1,291.6,217.5,688.3,51.5c205.5-86,292.5,24.9,311.7,43.4V200H0V102.6z'
         fill='url(#gradient)'
+        // className={mainClassName}
       />
     </svg>
   )
 }
 
-export default WorkBackgroundCurve
+export default BottomBackgroundCurve

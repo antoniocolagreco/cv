@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "copy-to-df": "xcopy /s /e /i /y out deploy",
+    "clean-df": "powershell -Command \"del -Recurse deploy\\*\"",
+    "df": "pnpm build && pnpm clean-df && pnpm copy-to-df"
   },
   "dependencies": {
     "@types/node": "20.3.1",
@@ -23,3 +26,4 @@
     "typescript": "5.1.3"
   }
 }
+

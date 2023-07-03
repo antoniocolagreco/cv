@@ -3,6 +3,7 @@
   "language_name": "english",
   "name": "Antonio Colagreco",
   "job_title": "Frontend Developer",
+  "avatar_alt": "A photo of Antonio Colagreco",
   "description": "Skilled and passionate frontend developer specializing in React, Next.js, and Gatsby. Creating intuitive and responsive user interfaces is my expertise. I leverage modern technologies to deliver high-quality web solutions that enhance usability and user experience.Proficient in Next.js, I can seamlessly integrate server-side rendering and API functionality to build robust and dynamic web applications.",
   "mail_1": "nevenbridge@gmail.com",
   "mail_2": "antoniocolagreco@pec.it",
@@ -69,3 +70,4 @@
     "description": "While working as a sales assciotate, I had long decided to return to my initial professional field and had restarted my training journey through various courses on Udemy. And here we are now, developing web apps and sites."
   }
 }
+

@@ -34,6 +34,8 @@ type Props = PageProps & {}
 
 const AppPage: Page<Props> = (props) => {
   const locale = useContext(LocaleContext).locale
+  const basePath = process.env.BASE_PATH || ''
+
   return (
     <div className='max-w-screen-lg mx-auto lg:my-8 shadow-2xl bg-white border border-gray-200 text-neutral-900 relative rounded overflow-hidden'>
       <TopBackgroundCurve
@@ -126,18 +128,18 @@ const AppPage: Page<Props> = (props) => {
           />
           <Projects className='px-4 sm:px-8 relative'>
             <ProjectItem
-              frontImageUrl='/assets/adkaora1.jpg'
+              frontImageUrl={`${basePath}/assets/adkaora1.jpg`}
               frontImageAlt={locale.adkaora_image_alt}
-              backImageUrl='/assets/adkaora2.jpg'
+              backImageUrl={`${basePath}/assets/adkaora2.jpg`}
               backImageAlt={locale.adkaora_image_alt}
               name='adkaora.com'
               url='https://adkaora.com'
               description={locale.adkaora_project_description}
             />
             <ProjectItem
-              frontImageUrl='/assets/a2a1.jpg'
+              frontImageUrl={`${basePath}/assets/a2a1.jpg`}
               frontImageAlt={locale.a2a_image_alt}
-              backImageUrl='/assets/a2a2.jpg'
+              backImageUrl={`${basePath}/assets/a2a2.jpg`}
               backImageAlt={locale.a2a_image_alt}
               name='a2aenergia.eu'
               url='https://www.a2aenergia.eu'

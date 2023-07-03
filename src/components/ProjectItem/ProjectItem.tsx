@@ -48,10 +48,10 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
       >
         <figure className='flex justify-center relative'>
           <div className='rounded-lg shadow-lg overflow-hidden inline-block absolute left-0 top-0 shadow-[#00000044]'>
-            <img src={backImageUrl} className='max-w-[14rem]' alt={backImageAlt} />
+            <img src={backImageUrl} className='max-w-[14rem]' alt={backImageAlt} placeholder='blur' />
           </div>
           <div className='rounded-lg shadow-lg overflow-hidden inline-block relative mt-10 ml-10 shadow-[#00000033]'>
-            <img src={frontImageUrl} className='max-w-[14rem]' alt={frontImageAlt} />
+            <img src={frontImageUrl} className='max-w-[14rem]' alt={frontImageAlt} placeholder='blur' />
           </div>
         </figure>
       </Link>
@@ -67,3 +67,4 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
 }
 
 export default ProjectItem
+

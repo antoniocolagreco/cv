@@ -1,11 +1,11 @@
 import { FC, HTMLAttributes } from 'react'
-import { Job } from '../../types/Job'
+import { JobExperience } from '../../types/locale'
 
-type WorkExperienceItemProps = HTMLAttributes<HTMLDivElement> & {
-  value: Job
+type JobProps = HTMLAttributes<HTMLDivElement> & {
+  value: JobExperience
 }
 
-const WorkExperienceItem: FC<WorkExperienceItemProps> = (props) => {
+const Job: FC<JobProps> = (props) => {
   const { value, className = '', ...otherProps } = props
   return (
     <div
@@ -20,4 +20,5 @@ const WorkExperienceItem: FC<WorkExperienceItemProps> = (props) => {
   )
 }
 
-export default WorkExperienceItem
+export default Job
+

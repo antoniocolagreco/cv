@@ -27,7 +27,10 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
     ...otherProps
   } = props
   return (
-    <article className={`grid gap-x-8 md:gap-x-16 gap-y-4 px-4 sm:mt-4 mt-12 first:mt-4 ${className}`} {...otherProps}>
+    <article
+      className={`grid gap-x-8 md:gap-x-16 gap-y-4 px-4 sm:mt-4 mt-12 first:mt-4 break-inside-avoid ${className}`}
+      {...otherProps}
+    >
       <Link
         href={url}
         target='_blank'

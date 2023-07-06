@@ -39,7 +39,7 @@ const Skills: FC<SkillsProps> = (props) => {
           <GatsbyIcon className='fill-violet-700' width={24} />
           Gatsby
         </SkillBadge>
-        <SkillBadge className='border-cyan-500 bg-neutral-800 text-cyan-500'>
+        <SkillBadge className='border-cyan-500  bg-white'>
           <ReactIcon className='fill-cyan-500' width={24} />
           React
         </SkillBadge>

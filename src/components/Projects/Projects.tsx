@@ -19,18 +19,18 @@ const Projects: FC<ProjectsProps> = (props) => {
       </div>
       <div className='flex flex-col gap-y-8 md:gap-y-4'>
         <ProjectItem
-          frontImageUrl='/images/adkaora1.jpg'
+          frontImageUrl='/images/adkaora1.webp'
           frontImageAlt={dictionary.adkaora_image_alt}
-          backImageUrl='/images/adkaora2.jpg'
+          backImageUrl='/images/adkaora2.webp'
           backImageAlt={dictionary.adkaora_image_alt}
           name='adkaora.com'
           url='https://adkaora.com'
           description={dictionary.adkaora_project_description}
         />
         <ProjectItem
-          frontImageUrl='/images/a2a1.jpg'
+          frontImageUrl='/images/a2a1.webp'
           frontImageAlt={dictionary.a2a_image_alt}
-          backImageUrl='/images/a2a2.jpg'
+          backImageUrl='/images/a2a2.webp'
           backImageAlt={dictionary.a2a_image_alt}
           name='a2aenergia.eu'
           url='https://www.a2aenergia.eu'

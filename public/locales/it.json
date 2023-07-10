@@ -1,6 +1,7 @@
 {
   "language": "it",
   "language_name": "italiano",
+  "download_pdf": "scarica",
   "name": "Antonio Colagreco",
   "job_title": "Sviluppatore Frontend",
   "avatar_alt": "Una foto di Antonio Colagreco",
@@ -64,6 +65,39 @@
       "description": "Vendita di computer e componenti, il punto vendita offriva anche servizi professionali di assemblaggio e supporto tecnico. L'azienda si occupava anche di installazione e configurazione di reti aziendali di piccole dimensioni. L'azienda originale senza dipendete ma con con un socio.",
       "date": "2002 — 2005"
     }
-  ]
+  ],
+  "privacy": {
+    "title": "Informativa sulla Privacy",
+    "description": "Gentile Utente, la presente informativa ha lo scopo di informarti che questo sito web, che mostra il curriculum di Antonio Colagreco, non raccoglie alcun dato personale dagli utenti e non utilizza cookie o archiviazione locale del browser.",
+    "collection_of_personal_data": {
+      "title": "Raccolta dei Dati Personali",
+      "description": "Il sito web non richiede, raccoglie o memorizza alcun dato personale degli utenti. Non viene effettuata alcuna registrazione o richiesta di informazioni personali."
+    },
+    "use_of_cookies": {
+      "title": "Utilizzo dei Cookie",
+      "description": "Il sito web non utilizza cookie o altre tecnologie di tracciamento per raccogliere informazioni personali."
+    },
+    "local_browsers_storage": {
+      "title": "Archiviazione Locale del Browser",
+      "description": "Non viene effettuata alcuna archiviazione locale del browser (come localStorage o sessionStorage) per raccogliere o conservare dati personali."
+    },
+    "sharing_of_personal_data": {
+      "title": "Condivisione dei Dati Personali",
+      "description": "Poiché non vengono raccolti dati personali, non condivido o trasferisco tali informazioni a terze parti."
+    },
+    "data_security": {
+      "title": "Sicurezza dei Dati",
+      "description": "Non essendo raccolti dati personali, non sono previste misure di sicurezza specifiche. Tuttavia, adotto misure di sicurezza standard per proteggere il sito web da utilizzi impropri."
+    },
+    "changes_to_the_policy": {
+      "title": "Modifiche all'Informativa",
+      "description": "Mi riservo il diritto di apportare modifiche a questa informativa sulla privacy. Eventuali modifiche saranno pubblicate su questo stesso sito web."
+    }
+  },
+  "cookie_policy": {
+    "title": "Cookie Policy",
+    "description": "Questo sito web non utilizza cookie o altre tecnologie di tracciamento per raccogliere informazioni personali degli utenti. Non vengono utilizzati cookie di sessione, cookie persistenti o altre tecnologie di tracciamento similari. Non effettuo alcun tracciamento o profilazione degli utenti attraverso questo sito web."
+  },
+  "scroll_to_top": "Torna all'inizio"
 }
 

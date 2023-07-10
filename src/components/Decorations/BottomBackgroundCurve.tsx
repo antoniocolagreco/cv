@@ -10,7 +10,7 @@ const BottomBackgroundCurve: FC<BottomBackgroundCurveProps> = (props) => {
   return (
     <svg xmlns='http://www.w3.org/2000/svg' viewBox={viewBox} preserveAspectRatio='none' {...otherProps}>
       <defs>
-        <linearGradient id='gradient' x1='0%' y1='0%' x2='100%' y2='100%'>
+        <linearGradient id='gradientBottom' x1='0%' y1='0%' x2='0%' y2='100%'>
           <stop offset='0%' stopColor='#0284c7' />
           <stop offset='100%' stopColor='#0369a1' />
         </linearGradient>
@@ -21,7 +21,7 @@ const BottomBackgroundCurve: FC<BottomBackgroundCurveProps> = (props) => {
       />
       <path
         d='M0,102.6C416.4-53.1,291.6,217.5,688.3,51.5c205.5-86,292.5,24.9,311.7,43.4V200H0V102.6z'
-        fill='url(#gradient)'
+        fill='url(#gradientBottom)'
         // className={mainClassName}
       />
     </svg>
@@ -29,3 +29,4 @@ const BottomBackgroundCurve: FC<BottomBackgroundCurveProps> = (props) => {
 }
 
 export default BottomBackgroundCurve
+

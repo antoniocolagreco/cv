@@ -1,6 +1,7 @@
 {
   "language": "en",
   "language_name": "english",
+  "download_pdf": "download",
   "name": "Antonio Colagreco",
   "job_title": "Frontend Developer",
   "avatar_alt": "A photo of Antonio Colagreco",
@@ -64,6 +65,39 @@
       "description": "Computers and components retailer providing professional assembly and technical support services. The company expertise also extended to installing and configuring small-scale business networks. The original company with a business partner in place of one employee.",
       "date": "2002 — 2005"
     }
-  ]
+  ],
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "Dear User, this privacy policy aims to inform you that this website, which displays the resume of Antonio Colagreco, does not collect any personal data from users and does not use cookies or local browser storage.",
+    "collection_of_personal_data": {
+      "title": "Collection of Personal Data",
+      "description": "This website does not request, collect, or store any personal data from users. No registration or request for personal information is made."
+    },
+    "use_of_cookies": {
+      "title": "Use of Cookies",
+      "description": "This website does not use cookies or other tracking technologies to collect personal information."
+    },
+    "local_browsers_storage": {
+      "title": "Local Browser Storage",
+      "description": "No local browser storage (such as localStorage or sessionStorage) is used to collect or store personal data."
+    },
+    "sharing_of_personal_data": {
+      "title": "Sharing of Personal Data",
+      "description": "As no personal data is collected, we do not share or transfer such information to third parties."
+    },
+    "data_security": {
+      "title": "Data Security",
+      "description": "Since no personal data is collected, no specific security measures are in place. However, we adopt standard security measures to protect our website from unauthorized access or improper use."
+    },
+    "changes_to_the_policy": {
+      "title": "Changes to the Policy",
+      "description": "I reserve the right to make changes to this privacy policy. Any changes will be published on our website."
+    }
+  },
+  "cookie_policy": {
+    "title": "Cookie Policy",
+    "description": "This website does not use cookies or other tracking technologies to collect users' personal information. No session cookies, persistent cookies, or similar tracking technologies are used. I do not track or profile users through this website."
+  },
+  "scroll_to_top": "Scroll to top"
 }
 

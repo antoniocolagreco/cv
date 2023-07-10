@@ -5,13 +5,20 @@ import BottomBackgroundCurve from '../components/Decorations/BottomBackgroundCur
 import WorkBackgroundCurve from '../components/Decorations/ProjectsBackgroundCurve'
 import TopBackgroundCurve from '../components/Decorations/TopBackgroundCurve'
 import PastBackgroundCurve from '../components/Decorations/WorkBackgroundCurve'
+import DownloadLink from '../components/DownloadLink/DownloadLink'
 import Education from '../components/Education/Education'
+import HomeLink from '../components/HomeLink/HomeLink'
 import Languages from '../components/Languages/Languages'
 import LocaleChanger from '../components/LocaleChanger/LocaleChanger'
+import PrivacyLinks from '../components/PrivacyLinks/PrivacyLinks'
 import Projects from '../components/Projects/Projects'
 import Skills from '../components/Skills/Skills'
+import Underline from '../components/Underline/Underline'
 import WorkExperience from '../components/WorkExperience/WorkExperience'
+import UpIcon from '../icons/UpIcon'
 import Dictionary from '../types/locale'
+import { getYear } from '../utilities/dates'
+import { suffixPath } from '../utilities/suffixPath'
 
 export type HomePageProps = PageProps & { params: { locale: string } }
 
@@ -21,13 +28,16 @@ export const generateMetadata: DynamicMetadata<HomePageProps> = async (props) =>
     searchParams,
   } = props
 
-  const dictionary: Dictionary = await import(`/public/locales/${locale}.json`)
+  const data = await import(`/public/locales/${locale}.json`)
+  const dictionary: Dictionary = JSON.parse(JSON.stringify(data))
+
   return {
-    title: dictionary.name,
+    title: `${dictionary.name} | Resume`,
     description: dictionary.description,
-    authors: [{ name: dictionary.name }],
     creator: dictionary.name,
     generator: 'Next.js',
+    metadataBase: new URL(process.env.NEXT_PUBLIC_URL || ''),
+    icons: `${suffixPath}/favicon.ico`,
     keywords: [
       'Anonio',
       'Colagreco',
@@ -47,8 +57,18 @@ export const generateMetadata: DynamicMetadata<HomePageProps> = async (props) =>
       'isg',
       'ssr',
     ],
-    openGraph: { title: dictionary.name, description: dictionary.description, images: '/public/images/og.webp' },
-    twitter: { title: dictionary.name, description: dictionary.description, images: '/public/images/og.webp' },
+    openGraph: {
+      title: dictionary.name,
+      description: dictionary.description,
+      images: `${suffixPath}/images/${locale}/og.webp`,
+      type: 'profile',
+    },
+    twitter: {
+      title: dictionary.name,
+      description: dictionary.description,
+      images: `${suffixPath}/images/${locale}/og.webp`,
+      card: 'summary_large_image',
+    },
   }
 }
 
@@ -58,24 +78,33 @@ const HomePage: AsyncPage<HomePageProps> = async (props) => {
     searchParams,
   } = props
 
-  const dictionary: Dictionary = await import(`/public/locales/${locale}.json`)
+  const data = await import(`/public/locales/${locale}.json`)
+  const dictionary: Dictionary = JSON.parse(JSON.stringify(data))
+
+  const locales = process.env.NEXT_PUBLIC_LOCALES?.split(',').map((locale) => {
+    return { value: locale, node: locale, href: `${suffixPath}/${locale}` }
+  })
 
   return (
-    <div className='max-w-screen-lg mx-auto lg:my-8 shadow-2xl bg-white border border-gray-200 text-neutral-900 relative rounded overflow-hidden'>
-      <header className='px-4 sm:px-8 py-4 flex justify-end'>
+    <>
+      <header className=' relative px-4 sm:px-8 py-4 flex justify-end gap-4'>
         <TopBackgroundCurve
-          className='absolute top-0 left-0 right-0 pointer-events-none'
+          className='absolute top-0 left-0 right-0'
           secondaryClassName='fill-amber-500'
           mainClassName=''
           height='200px'
           width='100%'
         />
-        <LocaleChanger value={locale} options={process.env.NEXT_PUBLIC_LOCALES?.split(',')} className='relative' />
+        <DownloadLink href={`${suffixPath}/download/${locale}/antonio-colagreco-resume.pdf`} download>
+          {dictionary.download_pdf}
+        </DownloadLink>
+        <HomeLink href={`${suffixPath}/${locale}`} />
+        <LocaleChanger value={locale} options={locales} className='relative' />
       </header>
       <main>
-        <div className='gap-x-8 gap-y-4 px-4 py-8 sm:px-8 grid grid-cols-[auto] sm:grid-cols-[auto_1fr] lg:grid-cols-[auto_1fr_auto] sm:justify-items-stretch grid-rows-[auto_1fr]'>
+        <div className='relative gap-x-8 gap-y-4 px-4 py-8 sm:px-8 grid grid-cols-[auto] sm:grid-cols-[auto_1fr] lg:grid-cols-[auto_1fr_auto] sm:justify-items-stretch grid-rows-[auto_1fr]'>
           <Avatar
-            src='/images/avatar.webp'
+            src={`${suffixPath}/images/avatar.webp`}
             alt={dictionary.avatar_alt}
             className='self-start justify-self-start hidden sm:block  row-start-2 col-start-1'
           />
@@ -85,11 +114,11 @@ const HomePage: AsyncPage<HomePageProps> = async (props) => {
           </div>
           <div className='col-start-1 sm:col-start-2 row-span-1 row-start-2'>
             <Avatar
-              src='/images/avatar.webp'
+              src={`${suffixPath}/images/avatar.webp`}
               alt={dictionary.avatar_alt}
               className='float-left mr-4 mb-2 block sm:hidden'
             />
-            <p className='text'>{dictionary.description}</p>
+            <p className='text-base'>{dictionary.description}</p>
           </div>
           <Contacts
             dictionary={dictionary}
@@ -124,14 +153,29 @@ const HomePage: AsyncPage<HomePageProps> = async (props) => {
           <WorkExperience dictionary={dictionary} className='px-4 sm:px-8 relative' />
         </div>
       </main>
-      <BottomBackgroundCurve
-        className='mt-8'
-        secondaryClassName='fill-amber-500'
-        mainClassName=''
-        height='100px'
-        width='100%'
-      />
-    </div>
+      <footer className=''>
+        <BottomBackgroundCurve
+          className='mt-8'
+          secondaryClassName='fill-amber-500'
+          mainClassName=''
+          height='150px'
+          width='100%'
+        />
+        <div className='relative text-sm sm:text-base bg-gradient-to-b from-sky-700 to-sky-800  px-4 sm:px-8 pb-4 flex justify-center text-white justify-between'>
+          <div className='grid grid-cols-3 gap-8'>
+            <div className='flex flex-col flex-wrap gap-2'>
+              <div>{`Antonio Colagreco - ${getYear(locale)}`}</div>
+              <div>{`P.IVA 02349530689`}</div>
+            </div>
+            <PrivacyLinks dictionary={dictionary} />
+            <a className='cursor-pointer flex gap-2 items-end justify-end fill-white group' href='#'>
+              <Underline>{dictionary.scroll_to_top}</Underline>
+              <UpIcon width={24} height={24} className='border-2 rounded-full border-amber-500 group-hover:' />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </>
   )
 }
 

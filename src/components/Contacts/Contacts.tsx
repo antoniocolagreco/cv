@@ -1,8 +1,8 @@
 import { FC, HTMLAttributes } from 'react'
 import AltMailIcon from '../../icons/AltMailIcon'
 import CallIcon from '../../icons/CallIcon'
-import HomeIcon from '../../icons/HomeIcon'
 import LinkedInIcon from '../../icons/LinkedInIcon'
+import LocationIcon from '../../icons/LocationIcon'
 import Dictionary from '../../types/locale'
 import ContactLink from '../ContactLink/ContactLink'
 import SimpleBadge from '../SimpleBadge/SimpleBadge'
@@ -39,7 +39,7 @@ const Contacts: FC<ContactsProps> = (props) => {
         </ContactLink>
         <ContactLink href={dictionary.google_map_url} target='_blank'>
           <SimpleBadge className='bg-white'>
-            <HomeIcon width={36} />
+            <LocationIcon width={36} />
           </SimpleBadge>
           <Underline>{dictionary.address}</Underline>
         </ContactLink>

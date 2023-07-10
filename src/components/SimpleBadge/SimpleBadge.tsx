@@ -12,3 +12,4 @@ const SimpleBadge: FC<SimpleBadgeProps> = (props) => {
 }
 
 export default SimpleBadge
+

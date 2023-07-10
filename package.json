@@ -7,11 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "copy-to-df": "xcopy /s /e /i /y out deploy",
-    "clean-df": "powershell -Command \"del -Recurse deploy\\*\"",
-    "df": "pnpm build && pnpm clean-df && pnpm copy-to-df"
+    "copy-to-deploy-folder": "xcopy /s /e /i /y out deploy",
+    "clean-deploy-folder": "powershell -Command \"del -Recurse deploy\\*\"",
+    "build-deploy": "pnpm build && pnpm clean-deploy-folder && pnpm copy-to-deploy-folder"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "@types/node": "20.3.1",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",

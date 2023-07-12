@@ -37,6 +37,13 @@ export const generateMetadata: DynamicMetadata<PrivacyPolicyPageProps> = async (
   }
 }
 
+export const generateStaticParams = (): { locale: string }[] => {
+  const locales = process.env.NEXT_PUBLIC_LOCALES?.split(',') || []
+  return locales.map((locale) => {
+    return { locale }
+  })
+}
+
 const PrivacyPolicyPage: AsyncPage<PrivacyPolicyPageProps> = async (props) => {
   const {
     params: { locale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE },

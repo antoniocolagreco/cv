@@ -52,7 +52,7 @@ const PrivacyLinks: FC<PrivacyLinksProps> = (props) => {
   }
 
   return (
-    <div className={`flex flex-col flex-wrap gap-2 justify-center ${className}`} {...otherProps}>
+    <div className={`flex flex-col items-start gap-1 ${className}`} {...otherProps}>
       <a className='cursor-pointer' onClick={showPrivacyModal} href={`/${locale}/privacy-policy`}>
         <Underline>{dictionary.privacy.title}</Underline>
       </a>

@@ -37,6 +37,13 @@ export const generateMetadata: DynamicMetadata<CokkiePolicyPageProps> = async (p
   }
 }
 
+export const generateStaticParams = (): { locale: string }[] => {
+  const locales = process.env.NEXT_PUBLIC_LOCALES?.split(',') || []
+  return locales.map((locale) => {
+    return { locale }
+  })
+}
+
 const CokkiePolicyPage: Page<CokkiePolicyPageProps> = async (props) => {
   const {
     params: { locale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE },

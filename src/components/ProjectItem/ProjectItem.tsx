@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { FC, HTMLAttributes } from 'react'
 import Underline from '../Underline/Underline'
@@ -51,10 +52,10 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
       >
         <figure className='flex justify-center relative'>
           <div className='rounded-lg shadow-lg overflow-hidden inline-block absolute left-0 top-0 shadow-[#00000044]'>
-            <img src={backImageUrl} className='max-w-[14rem]' alt={backImageAlt} placeholder='blur' />
+            <Image width={224} height={317} src={backImageUrl} alt={backImageAlt} />
           </div>
           <div className='rounded-lg shadow-lg overflow-hidden inline-block relative mt-10 ml-10 shadow-[#00000033]'>
-            <img src={frontImageUrl} className='max-w-[14rem]' alt={frontImageAlt} placeholder='blur' />
+            <Image width={224} height={317} src={frontImageUrl} alt={frontImageAlt} />
           </div>
         </figure>
       </Link>

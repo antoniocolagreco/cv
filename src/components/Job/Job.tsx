@@ -9,7 +9,7 @@ const Job: FC<JobProps> = (props) => {
   const { value, className = '', ...otherProps } = props
   return (
     <div
-      className={`border-4 rounded-2xl p-4 border-rose-500 bg-gradient-to-br from-white to-zinc-50 ${className}`}
+      className={`border-4 rounded-2xl p-4 border-rose-500 bg-gradient-to-br from-white to-zinc-50 print:break-inside-avoid-page ${className}`}
       {...otherProps}
     >
       <h4 className='text-2xl font-bold'>{value.role}</h4>

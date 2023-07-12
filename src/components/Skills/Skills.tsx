@@ -24,7 +24,7 @@ const Skills: FC<SkillsProps> = (props) => {
 
   return (
     <section className={`fill-sky-700 ${className}`}>
-      <div className='flex items-center mb-8 justify-center'>
+      <div className='flex items-center justify-center mb-8'>
         <DecoratedBadge className='bg-sky-700 fill-white'>
           <SkillsIcon width={36} />
         </DecoratedBadge>

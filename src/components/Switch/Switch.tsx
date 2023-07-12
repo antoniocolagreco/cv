@@ -4,19 +4,19 @@ import { FC, HTMLAttributes, ReactNode } from 'react';
 
 export type SwitchOption = { value: string; node: ReactNode; href?: string }
 
-export type SwitchProps = HTMLAttributes<HTMLElement> & {
+export type SwitchProps = Omit<HTMLAttributes<HTMLElement>, 'onChange'> & {
   value: string
-  onChange?: ((val: string) => {} | void) | undefined
+  onChange?: ((value: string) => {} | void) | undefined
   options: SwitchOption[] | undefined
 }
 
 const Switch: FC<SwitchProps> = (props) => {
-  const { value: value, onChange, options, children, className = '', ...otherProps } = props
+  const { value, onChange, options, children, className = '', ...otherProps } = props
 
   if (!options || options.length === 0) return
 
-  const buttonClickHandler = (buttonValue: string) => {
-    if (onChange) onChange(buttonValue)
+  const handleOnClick = (value: string) => {
+    if (onChange) onChange(value)
   }
 
   return (
@@ -25,13 +25,11 @@ const Switch: FC<SwitchProps> = (props) => {
       {...otherProps}
     >
       {options.map((option) => (
-        <button
-          type='button'
+        <div
           key={option.value}
           className={`relative transition-all active:scale-95 group ${
             value === option.value ? 'text-white' : 'text-sky-700'
           }`}
-          {...(option.href ? {} : { onClick: () => buttonClickHandler(option.value) })}
         >
           <div
             className={`absolute duration-300 transition-all rounded-full w-10 h-10 opacity-0 bg-amber-600 ${
@@ -48,11 +46,15 @@ const Switch: FC<SwitchProps> = (props) => {
               {option.node}
             </Link>
           ) : (
-            <div className='relative rounded-full w-10 h-10 flex flex-col items-center justify-center font-medium text-lg'>
+            <button
+              type='button'
+              className='relative rounded-full w-10 h-10 flex flex-col items-center justify-center font-medium text-lg'
+              onClick={() => handleOnClick(option.value)}
+            >
               {option.node}
-            </div>
+            </button>
           )}
-        </button>
+        </div>
       ))}
     </div>
   )

@@ -1,7 +1,7 @@
+import Underline from '@/components/Underline/Underline'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC, HTMLAttributes } from 'react'
-import Underline from '../Underline/Underline'
 
 type ProjectItemProps = HTMLAttributes<HTMLElement> & {
   frontImageUrl: string

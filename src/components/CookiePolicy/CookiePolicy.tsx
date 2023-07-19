@@ -1,5 +1,5 @@
+import { Dictionary } from '@/dictionaries/dictionaries'
 import { FC, HTMLAttributes } from 'react'
-import Dictionary from '../../types/locale'
 
 type CookiePolicyProps = HTMLAttributes<HTMLDivElement> & { dictionary: Dictionary }
 

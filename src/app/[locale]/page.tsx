@@ -1,86 +1,25 @@
-import { AsyncPage, DynamicMetadata, PageProps } from '@/types/next'
-import Avatar from '../../components/Avatar/Avatar'
-import Contacts from '../../components/Contacts/Contacts'
-import WorkBackgroundCurve from '../../components/Decorations/ProjectsBackgroundCurve'
-import PastBackgroundCurve from '../../components/Decorations/WorkBackgroundCurve'
-import Education from '../../components/Education/Education'
-import Languages from '../../components/Languages/Languages'
-import Projects from '../../components/Projects/Projects'
-import Skills from '../../components/Skills/Skills'
-import WorkExperience from '../../components/WorkExperience/WorkExperience'
-import Dictionary from '../../types/locale'
-import { suffixPath } from '../../utilities/suffixPath'
+import Avatar from '@/components/Avatar/Avatar'
+import Contacts from '@/components/Contacts/Contacts'
+import WorkBackgroundCurve from '@/components/Decorations/ProjectsBackgroundCurve'
+import PastBackgroundCurve from '@/components/Decorations/WorkBackgroundCurve'
+import Education from '@/components/Education/Education'
+import Languages from '@/components/Languages/Languages'
+import Projects from '@/components/Projects/Projects'
+import Skills from '@/components/Skills/Skills'
+import WorkExperience from '@/components/WorkExperience/WorkExperience'
+import { DEFAULT_LANGUAGE, getDictionary } from '@/dictionaries/dictionaries'
+import { DefaultPageProps, NextPage } from '@/types/next'
+import { Fragment } from 'react'
 
-export type HomePageProps = PageProps & { params: { locale: string } }
+export type HomePageProps = DefaultPageProps & { params?: { locale?: string } }
 
-export const generateMetadata: DynamicMetadata<HomePageProps> = async (props) => {
-  const {
-    params: { locale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE },
-    searchParams,
-  } = props
+const HomePage: NextPage<HomePageProps> = (props) => {
+  const { params: { locale = DEFAULT_LANGUAGE } = { locale: DEFAULT_LANGUAGE } } = props
 
-  const data = await import(`/public/locales/${locale}.json`)
-  const dictionary: Dictionary = JSON.parse(JSON.stringify(data))
-
-  return {
-    title: `${dictionary.name} | Resume`,
-    description: dictionary.description,
-    creator: dictionary.name,
-    generator: 'Next.js',
-    metadataBase: new URL(process.env.NEXT_PUBLIC_URL || ''),
-    icons: `${suffixPath}/favicon.ico`,
-    keywords: [
-      'Anonio',
-      'Colagreco',
-      'cv',
-      'curriculum',
-      'vitae',
-      'resume',
-      'next.js',
-      'gatsby',
-      'react',
-      'typescript',
-      'javascript',
-      'web',
-      'development',
-      'app',
-      'ssg',
-      'isg',
-      'ssr',
-    ],
-    openGraph: {
-      title: dictionary.name,
-      description: dictionary.description,
-      images: `${suffixPath}/images/${locale}/og.webp`,
-      type: 'profile',
-    },
-    twitter: {
-      title: dictionary.name,
-      description: dictionary.description,
-      images: `${suffixPath}/images/${locale}/og.webp`,
-      card: 'summary_large_image',
-    },
-  }
-}
-
-export const generateStaticParams = (): { locale: string }[] => {
-  const locales = process.env.NEXT_PUBLIC_LOCALES?.split(',') || []
-  return locales.map((locale) => {
-    return { locale }
-  })
-}
-
-const HomePage: AsyncPage<HomePageProps> = async (props) => {
-  const {
-    params: { locale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE },
-    searchParams,
-  } = props
-
-  const data = await import(`/public/locales/${locale}.json`)
-  const dictionary: Dictionary = JSON.parse(JSON.stringify(data))
+  const dictionary = getDictionary(locale)
 
   return (
-    <main>
+    <Fragment>
       <div className='relative gap-x-8 gap-y-4 px-4 py-8 sm:px-8 grid grid-cols-[auto] sm:grid-cols-[auto_1fr] lg:grid-cols-[auto_1fr_auto] sm:justify-items-stretch grid-rows-[auto_1fr]'>
         <Avatar
           className='self-start justify-self-start hidden sm:block  row-start-2 col-start-1'
@@ -126,7 +65,7 @@ const HomePage: AsyncPage<HomePageProps> = async (props) => {
         />
         <WorkExperience dictionary={dictionary} className='px-4 sm:px-8 relative' />
       </div>
-    </main>
+    </Fragment>
   )
 }
 

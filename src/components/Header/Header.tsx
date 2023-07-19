@@ -1,22 +1,22 @@
 'use client'
+import TopBackgroundCurve from '@/components/Decorations/TopBackgroundCurve'
+import DownloadLink from '@/components/DownloadLink/DownloadLink'
+import HomeLink from '@/components/HomeLink/HomeLink'
+import LocaleChanger from '@/components/LocaleChanger/LocaleChanger'
+import { SUPPORTED_LANGUAGES, getDictionary } from '@/dictionaries/dictionaries'
 import { usePathname } from 'next/navigation'
 import { FC, HTMLAttributes } from 'react'
-import Dictionary from '../../types/locale'
-import { suffixPath } from '../../utilities/suffixPath'
-import TopBackgroundCurve from '../Decorations/TopBackgroundCurve'
-import DownloadLink from '../DownloadLink/DownloadLink'
-import HomeLink from '../HomeLink/HomeLink'
-import LocaleChanger from '../LocaleChanger/LocaleChanger'
 
-type HeaderProps = HTMLAttributes<HTMLElement> & { dictionary: Dictionary }
+type HeaderProps = HTMLAttributes<HTMLElement> & { lang: string }
 
-const Header: FC<HeaderProps> = async (props) => {
-  const { dictionary, children, className = '', ...otherProps } = props
-  const pathname = usePathname()
-  const locale = dictionary.language
+const Header: FC<HeaderProps> = (props) => {
+  const { lang, children, className = '', ...otherProps } = props
+  const pathname: string = usePathname()
+  const dictionary = getDictionary(lang)
 
-  const locales = process.env.NEXT_PUBLIC_LOCALES?.split(',').map((locale) => {
-    return { value: locale, node: locale, href: `${suffixPath}/${locale}` }
+  const homePages = SUPPORTED_LANGUAGES.map((l) => `/${l}`)
+  const locales = SUPPORTED_LANGUAGES.map((locale) => {
+    return { value: locale, node: locale, href: `/${locale}` }
   })
 
   return (
@@ -28,20 +28,20 @@ const Header: FC<HeaderProps> = async (props) => {
         height='200px'
         width='100%'
       />
-      {!pathname.includes('cookie-policy') && !pathname.includes('privacy-policy') && (
+      {(homePages?.includes(pathname) || pathname === '/') && (
         <DownloadLink
-          href={`${suffixPath}/download/${locale}/antonio-colagreco-resume.pdf`}
-          download='antonio-colagreco-resume.pdf'
+          href={`/download/${dictionary.download_file_name}`}
+          download={dictionary.download_file_name}
           target='_blank'
           prefetch={false}
         >
           {dictionary.download_pdf}
         </DownloadLink>
       )}
-      {(pathname.includes('cookie-policy') || pathname.includes('privacy-policy')) && (
-        <HomeLink href={`${suffixPath}/${locale}`} />
-      )}
-      <LocaleChanger value={locale} options={locales} className='relative' />
+      {!homePages?.includes(pathname) && pathname !== '/' && <HomeLink href={`/${lang}`} />}
+      {(homePages?.includes(pathname) ||
+        (pathname && (pathname.includes('cookie-policy') || pathname.includes('privacy-policy'))) ||
+        pathname === '/') && <LocaleChanger value={lang} options={locales} className='relative' />}
     </header>
   )
 }

@@ -1,8 +1,7 @@
 'use client'
+import Switch, { SwitchOption, SwitchProps } from '@/components/Switch/Switch'
 import { usePathname } from 'next/navigation'
 import { FC } from 'react'
-import { suffixPath } from '../../utilities/suffixPath'
-import Switch, { SwitchOption, SwitchProps } from '../Switch/Switch'
 
 const cleanURL = (pathname: string, locales: SwitchOption[]) => {
   let cleanPathname = pathname
@@ -22,7 +21,7 @@ const LocaleChanger: FC<SwitchProps> = (props) => {
   if (!options) return
 
   const localizedOptions: SwitchOption[] = options.map((option) => {
-    return { ...option, href: `${suffixPath}/${option.value}${cleanURL(pathname, options)}` }
+    return { ...option, href: `/${option.value}${cleanURL(pathname, options)}` }
   })
 
   return <Switch {...otherProps} options={localizedOptions} value={value} />

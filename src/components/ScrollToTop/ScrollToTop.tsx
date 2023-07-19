@@ -1,14 +1,15 @@
 'use client'
+import Underline from '@/components/Underline/Underline'
+import { getDictionary } from '@/dictionaries/dictionaries'
+import UpIcon from '@/icons/UpIcon'
 import { FC, HTMLAttributes, useEffect, useRef } from 'react'
-import UpIcon from '../../icons/UpIcon'
-import Dictionary from '../../types/locale'
-import Underline from '../Underline/Underline'
 
-type ScrollToTopProps = HTMLAttributes<HTMLDivElement> & { dictionary: Dictionary }
+type ScrollToTopProps = HTMLAttributes<HTMLDivElement> & { locale: string }
 
 const ScrollToTop: FC<ScrollToTopProps> = (props) => {
-  const { dictionary, children, className = '', ...otherProps } = props
+  const { locale, children, className = '', ...otherProps } = props
   let headerElementRef = useRef<HTMLElement | null>()
+  const dictionary = getDictionary(locale)
 
   useEffect(() => {
     headerElementRef.current = document.getElementById('top')

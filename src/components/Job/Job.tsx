@@ -1,5 +1,5 @@
+import { JobExperience } from '@/dictionaries/dictionaries'
 import { FC, HTMLAttributes } from 'react'
-import { JobExperience } from '../../types/locale'
 
 type JobProps = HTMLAttributes<HTMLDivElement> & {
   value: JobExperience

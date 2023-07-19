@@ -1,9 +1,8 @@
+import ProjectItem from '@/components/ProjectItem/ProjectItem'
+import SimpleBadge from '@/components/SimpleBadge/SimpleBadge'
+import { Dictionary } from '@/dictionaries/dictionaries'
+import ProjecttsIcon from '@/icons/ProjectsIcon'
 import { FC, HTMLAttributes } from 'react'
-import ProjecttsIcon from '../../icons/ProjectsIcon'
-import Dictionary from '../../types/locale'
-import { suffixPath } from '../../utilities/suffixPath'
-import ProjectItem from '../ProjectItem/ProjectItem'
-import SimpleBadge from '../SimpleBadge/SimpleBadge'
 
 type ProjectsProps = HTMLAttributes<HTMLElement> & { dictionary: Dictionary }
 
@@ -20,18 +19,18 @@ const Projects: FC<ProjectsProps> = (props) => {
       </div>
       <div className='flex flex-col gap-y-8 md:gap-y-4'>
         <ProjectItem
-          frontImageUrl={`${suffixPath}/images/adkaora1.webp`}
+          frontImageUrl={`/images/adkaora1.webp`}
           frontImageAlt={dictionary.adkaora_image_alt}
-          backImageUrl={`${suffixPath}/images/adkaora2.webp`}
+          backImageUrl={`/images/adkaora2.webp`}
           backImageAlt={dictionary.adkaora_image_alt}
           name='adkaora.com'
           url='https://adkaora.com'
           description={dictionary.adkaora_project_description}
         />
         <ProjectItem
-          frontImageUrl={`${suffixPath}/images/a2a1.webp`}
+          frontImageUrl={`/images/a2a1.webp`}
           frontImageAlt={dictionary.a2a_image_alt}
-          backImageUrl={`${suffixPath}/images/a2a2.webp`}
+          backImageUrl={`/images/a2a2.webp`}
           backImageAlt={dictionary.a2a_image_alt}
           name='a2aenergia.eu'
           url='https://www.a2aenergia.eu'

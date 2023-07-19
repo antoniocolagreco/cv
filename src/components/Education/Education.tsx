@@ -1,8 +1,8 @@
+import SimpleBadge from '@/components/SimpleBadge/SimpleBadge'
+import { Dictionary } from '@/dictionaries/dictionaries'
+import ComputerIcon from '@/icons/ComputerIcon'
+import EducationIcon from '@/icons/EducationIcon'
 import { FC, HTMLAttributes } from 'react'
-import ComputerIcon from '../../icons/ComputerIcon'
-import EducationIcon from '../../icons/EducationIcon'
-import Dictionary from '../../types/locale'
-import SimpleBadge from '../SimpleBadge/SimpleBadge'
 
 type EducationProps = HTMLAttributes<HTMLElement> & { dictionary: Dictionary }
 
@@ -11,7 +11,7 @@ const Education: FC<EducationProps> = (props) => {
 
   return (
     <section
-      className={`text-sky-50 rounded-none rounded-bl-3xl rounded-tr-[4rem] shrink-0 p-4 fill-teal-700 bg-gradient-to-tl from-teal-800 to-teal-600 sm:min-w-[22rem] cursor-default ${className}`}
+      className={`text-sky-50 rounded-none rounded-bl-3xl rounded-tr-[4rem] shrink-0 p-4 fill-teal-700 bg-gradient-to-tl from-teal-800 to-teal-600 sm:min-w-[23rem] cursor-default ${className}`}
       {...otherProps}
     >
       <div className='flex items-center mb-2'>

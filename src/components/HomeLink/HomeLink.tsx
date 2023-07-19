@@ -1,6 +1,6 @@
+import HomeIcon from '@/icons/HomeIcon'
 import Link, { LinkProps } from 'next/link'
 import { AnchorHTMLAttributes, FC, HTMLAttributes } from 'react'
-import HomeIcon from '../../icons/HomeIcon'
 
 type HomeLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> &
   LinkProps & { containerProps?: HTMLAttributes<HTMLElement> }

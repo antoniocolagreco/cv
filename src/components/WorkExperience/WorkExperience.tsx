@@ -1,8 +1,8 @@
+import Job from '@/components/Job/Job'
+import SimpleBadge from '@/components/SimpleBadge/SimpleBadge'
+import { Dictionary } from '@/dictionaries/dictionaries'
+import WorkIcon from '@/icons/WorkIcon'
 import { FC, HTMLAttributes } from 'react'
-import WorkIcon from '../../icons/WorkIcon'
-import Dictionary from '../../types/locale'
-import Job from '../Job/Job'
-import SimpleBadge from '../SimpleBadge/SimpleBadge'
 
 type WorkExperienceProps = HTMLAttributes<HTMLElement> & { dictionary: Dictionary }
 

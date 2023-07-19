@@ -1,14 +1,9 @@
-const getSuffixPath = (): string => {
+const getPath = (): string => {
   const isProd = process.env.NODE_ENV === 'production'
-  const path = isProd ? `${process.env.NEXT_PUBLIC_SUFFIX}` : ''
+  const path = isProd
+    ? `${process.env.PUBLIC_URL}${process.env.PUBLIC_SUFFIX}`
+    : `${process.env.LOCAL_URL}${process.env.LOCAL_SUFFIX}`
   return path
 }
 
-const getfullPath = (): string => {
-  const isProd = process.env.NODE_ENV === 'production'
-  const path = isProd ? `${process.env.NEXT_PUBLIC_URL}${process.env.NEXT_PUBLIC_SUFFIX}` : `${process.env.LOCAL_URL}`
-  return path
-}
-
-export const suffixPath = getSuffixPath()
-export const fullPath = getfullPath()
+export const path = getPath()

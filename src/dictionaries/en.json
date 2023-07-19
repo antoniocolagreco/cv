@@ -1,0 +1,108 @@
+{
+  "language": "en",
+  "language_name": "english",
+  "not_found": "Page not found",
+  "keywords": "Antonio, Colagreco, cv, curriculum, vitae, resume, next.js, gatsby, react, typescript, javascript, web, development, app, ssg, isg, ssr",
+  "download_pdf": "download PDF",
+  "download_file_name": "antonio-colagreco-resume-en.pdf",
+  "name": "Antonio Colagreco",
+  "job_title": "Frontend Developer",
+  "avatar_alt": "A photo of Antonio Colagreco",
+  "description": "Skilled and passionate frontend developer specializing in React, Next.js, and Gatsby. Creating intuitive and responsive user interfaces is my expertise. I leverage modern technologies to deliver high-quality web solutions that enhance usability and user experience.Proficient in Next.js, I can seamlessly integrate server-side rendering and API functionality to build robust and dynamic web applications.",
+  "mail_1": "nevenbridge@gmail.com",
+  "mail_2": "antoniocolagreco@pec.it",
+  "phone": "+39 320 705 4220",
+  "address": "Pescara (PE), Italy",
+  "google_map_url": "https://www.google.it/maps/place/Pescara",
+  "linked_in": "linkedin.com/in/antonio-colagreco",
+  "linked_in_url": "https://www.linkedin.com/in/antonio-colagreco",
+  "web_site_title": "antoniocolagreco.github.io/resume",
+  "web_site_url": "https://antoniocolagreco.github.io/resume/en",
+  "skills": "Skills",
+  "problem_solving": "Problem Solving",
+  "collaboration": "Collaboration",
+  "creative_thinking": "Creative Thinking",
+  "time_management": "Time Management",
+  "languages": "Language Proficiency",
+  "italian": "italian",
+  "english": "english",
+  "basic": "basic",
+  "intermediate": "intermediate",
+  "advanced": "advanced",
+  "native": "native",
+  "education": "Education",
+  "educations_title": "Computer Science Technician",
+  "education_istitute": "ITIS Luigi di Savoia, Chieti (CH)",
+  "recent_projects": "Recent Projects",
+  "adkaora_image_alt": "A screenshot of the website adkaora.com",
+  "adkaora_project_description": "I built this website from scratch as a solo project using Gatsby and React, following the design provided by the company. The site's content is managed through a headless CMS, Contentful. To ensure compliance with regulations, I implemented Iubenda, a comprehensive solution for legal compliance. For user authentication, Amazon Cognito was utilized, providing secure and seamless login functionality. Additionally, Google Analytics was integrated to provide detailed analytics and insights.",
+  "a2a_image_alt": "A screenshot of the website a2aenergia.eu",
+  "a2a_project_description": "Through a collaboration with hinto.com, I developed numerous frontend components for the website using Gatsby and React. This project involved a team of several individuals, and we utilized Figma and Jira for seamless collaboration. The result is a visually appealing and highly functional website that showcases the expertise and dedication of the team.",
+  "work_experience": "Work Experience",
+  "jobs": [
+    {
+      "role": "Frontend Developer",
+      "company_name": "Freelance",
+      "date": "2021 — present",
+      "description": "While working as a sales assciotate, I had long decided to return to my initial professional field and had restarted my training journey through various courses on Udemy. And here we are now, developing web apps and sites."
+    },
+    {
+      "role": "E-Commerce Specialist",
+      "company_name": "CheAutoRicambi SRL (Family Business)",
+      "date": "2012 — 2021",
+      "description": "My role was to sell spare parts mainly on eBay.it and Subito.it. My primary responsibilities included creating and managing listings, as well as coordinating logistics for shipments. Another important aspect of my role was customer management and I was also responsible for administrative tasks and accounting."
+    },
+    {
+      "role": "Fullstack Developer",
+      "company_name": "RARA System SRL",
+      "date": "2008 — 2011",
+      "description": "As a full-stack developer, I was responsible for developing web applications using the MVC pattern for clients in the public and banking sectors. One of my notable contributions was assisting in the creation of Information Kiosks for scheduling medical appointments within hospitals. Additionally, I played a crucial role in developing the company's in-house framework used for building all web applications. During this experience, I primarily worked with Java Server Faces, Spring and RichFaces."
+    },
+    {
+      "role": "Founder",
+      "company_name": "ITS di Antonio Colagreco",
+      "description": "Computers and components retailer providing professional assembly and technical support services. The company expertise also extended to installing and configuring small-scale business networks.",
+      "date": "2005 — 2007"
+    },
+    {
+      "role": "Co-Founder",
+      "company_name": "Samo Informatica SRL",
+      "description": "Computers and components retailer providing professional assembly and technical support services. The company expertise also extended to installing and configuring small-scale business networks. The original company with a business partner in place of one employee.",
+      "date": "2002 — 2005"
+    }
+  ],
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "Dear User, this privacy policy aims to inform you that this website, which displays the resume of Antonio Colagreco, does not collect any personal data from users and does not use cookies or local browser storage.",
+    "collection_of_personal_data": {
+      "title": "Collection of Personal Data",
+      "description": "This website does not request, collect, or store any personal data from users. No registration or request for personal information is made."
+    },
+    "use_of_cookies": {
+      "title": "Use of Cookies",
+      "description": "This website does not use cookies or other tracking technologies to collect personal information."
+    },
+    "local_browsers_storage": {
+      "title": "Local Browser Storage",
+      "description": "No local browser storage (such as localStorage or sessionStorage) is used to collect or store personal data."
+    },
+    "sharing_of_personal_data": {
+      "title": "Sharing of Personal Data",
+      "description": "As no personal data is collected, we do not share or transfer such information to third parties."
+    },
+    "data_security": {
+      "title": "Data Security",
+      "description": "Since no personal data is collected, no specific security measures are in place. However, we adopt standard security measures to protect our website from unauthorized access or improper use."
+    },
+    "changes_to_the_policy": {
+      "title": "Changes to the Policy",
+      "description": "I reserve the right to make changes to this privacy policy. Any changes will be published on our website."
+    }
+  },
+  "cookie_policy": {
+    "title": "Cookie Policy",
+    "description": "This website does not use cookies or other tracking technologies to collect users' personal information. No session cookies, persistent cookies, or similar tracking technologies are used. I do not track or profile users through this website."
+  },
+  "scroll_to_top": "Scroll to top"
+}
+

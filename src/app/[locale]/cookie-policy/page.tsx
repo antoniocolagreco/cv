@@ -1,57 +1,53 @@
-import { DynamicMetadata, Page, PageProps } from '@/types/next'
-import CookiePolicy from '../../../components/CookiePolicy/CookiePolicy'
-import Dictionary from '../../../types/locale'
-import { suffixPath } from '../../../utilities/suffixPath'
+import CookiePolicy from '@/components/CookiePolicy/CookiePolicy'
+import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES, getDictionary } from '@/dictionaries/dictionaries'
+import { DefaultPageProps, MetadataFunction, NextPage } from '@/types/next'
 
-type CokkiePolicyPageProps = PageProps & {}
+type CokkiePolicyPageProps = DefaultPageProps & { params: { locale: string } }
 
-export const generateMetadata: DynamicMetadata<CokkiePolicyPageProps> = async (props) => {
+export const generateMetadata: MetadataFunction<CokkiePolicyPageProps> = (props) => {
   const {
-    params: { locale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE },
-    searchParams,
+    params: { locale = DEFAULT_LANGUAGE },
   } = props
 
-  const data = await import(`/public/locales/${locale}.json`)
-  const dictionary: Dictionary = JSON.parse(JSON.stringify(data))
+  const dictionary = getDictionary(locale)
 
   return {
     title: `${dictionary.name} | ${dictionary.cookie_policy.title}`,
     description: dictionary.cookie_policy.description,
     creator: dictionary.name,
     generator: 'Next.js',
-    metadataBase: new URL(process.env.NEXT_PUBLIC_URL || ''),
-    icons: `${suffixPath}/favicon.ico`,
+    metadataBase: new URL(process.env.PUBLIC_URL || ''),
+    icons: `/favicon.ico`,
     keywords: ['Anonio', 'Colagreco', dictionary.cookie_policy.title],
     openGraph: {
       title: dictionary.name,
       description: dictionary.description,
-      images: `${suffixPath}/images/${locale}/og.webp`,
+      images: `/images/${locale}/og.webp`,
       type: 'profile',
     },
     twitter: {
       title: dictionary.name,
       description: dictionary.description,
-      images: `${suffixPath}/images/${locale}/og.webp`,
+      images: `/images/${locale}/og.webp`,
       card: 'summary_large_image',
     },
   }
 }
 
 export const generateStaticParams = (): { locale: string }[] => {
-  const locales = process.env.NEXT_PUBLIC_LOCALES?.split(',') || []
+  const locales = SUPPORTED_LANGUAGES || []
   return locales.map((locale) => {
     return { locale }
   })
 }
 
-const CokkiePolicyPage: Page<CokkiePolicyPageProps> = async (props) => {
+const CokkiePolicyPage: NextPage<CokkiePolicyPageProps> = (props) => {
   const {
-    params: { locale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE },
+    params: { locale = DEFAULT_LANGUAGE },
     searchParams,
   } = props
 
-  const data = await import(`/public/locales/${locale}.json`)
-  const dictionary: Dictionary = JSON.parse(JSON.stringify(data))
+  const dictionary = getDictionary(locale)
 
   return <CookiePolicy dictionary={dictionary} />
 }

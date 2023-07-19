@@ -1,19 +1,19 @@
 'use client'
+import Button from '@/components/Button/Button'
+import CookiePolicy from '@/components/CookiePolicy/CookiePolicy'
+import PrivacyPolicy from '@/components/PrivacyPolicy/PrivacyPolicy'
+import Underline from '@/components/Underline/Underline'
+import { ModalContext } from '@/contexts/ModalContext'
+import { getDictionary } from '@/dictionaries/dictionaries'
+import CheckIcon from '@/icons/CheckIcon'
 import { FC, HTMLAttributes, MouseEvent, useContext } from 'react'
-import { ModalContext } from '../../contexts/ModalContext'
-import CheckIcon from '../../icons/CheckIcon'
-import Dictionary from '../../types/locale'
-import Button from '../Button/Button'
-import CookiePolicy from '../CookiePolicy/CookiePolicy'
-import PrivacyPolicy from '../PrivacyPolicy/PrivacyPolicy'
-import Underline from '../Underline/Underline'
 
-type PrivacyLinksProps = HTMLAttributes<HTMLDivElement> & { dictionary: Dictionary }
+type PrivacyLinksProps = HTMLAttributes<HTMLDivElement> & { locale: string }
 
 const PrivacyLinks: FC<PrivacyLinksProps> = (props) => {
-  const { dictionary, children, className = '', ...otherProps } = props
+  const { locale, children, className = '', ...otherProps } = props
   const modalContext = useContext(ModalContext)
-  const locale = dictionary.language
+  const dictionary = getDictionary(locale)
 
   const showPrivacyModal = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
@@ -54,10 +54,10 @@ const PrivacyLinks: FC<PrivacyLinksProps> = (props) => {
   return (
     <div className={`flex flex-col items-start gap-1 ${className}`} {...otherProps}>
       <a className='cursor-pointer' onClick={showPrivacyModal} href={`/${locale}/privacy-policy`}>
-        <Underline>{dictionary.privacy.title}</Underline>
+        <Underline>{dictionary.privacy?.title}</Underline>
       </a>
       <a className='cursor-pointer' onClick={showCookieModal} href={`/${locale}/cookie-policy`}>
-        <Underline>{dictionary.cookie_policy.title}</Underline>
+        <Underline>{dictionary.cookie_policy?.title}</Underline>
       </a>
     </div>
   )

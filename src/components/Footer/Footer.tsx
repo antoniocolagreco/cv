@@ -1,14 +1,13 @@
+import BottomBackgroundCurve from '@/components/Decorations/BottomBackgroundCurve'
+import FooterInfo from '@/components/FooterInfo/FooterInfo'
+import PrivacyLinks from '@/components/PrivacyLinks/PrivacyLinks'
+import ScrollToTop from '@/components/ScrollToTop/ScrollToTop'
 import { FC, HTMLAttributes } from 'react'
-import Dictionary from '../../types/locale'
-import { getYear } from '../../utilities/dates'
-import BottomBackgroundCurve from '../Decorations/BottomBackgroundCurve'
-import PrivacyLinks from '../PrivacyLinks/PrivacyLinks'
-import ScrollToTop from '../ScrollToTop/ScrollToTop'
 
-type FooterProps = HTMLAttributes<HTMLDivElement> & { dictionary: Dictionary }
+type FooterProps = HTMLAttributes<HTMLDivElement> & { lang: string }
 
-const Footer: FC<FooterProps> = async (props) => {
-  const { dictionary, children, className = '', ...otherProps } = props
+const Footer: FC<FooterProps> = (props) => {
+  const { lang, children, className = '', ...otherProps } = props
 
   return (
     <footer className={`relative  text-white ${className}`} {...otherProps}>
@@ -21,12 +20,9 @@ const Footer: FC<FooterProps> = async (props) => {
       />
 
       <div className='relative text-sm sm:text-base bg-gradient-to-b from-sky-700 to-sky-800 flex flex-wrap justify-between px-4 pb-4 pt-0 sm:px-8 gap-4 items-end'>
-        <div className='flex flex-col gap-1'>
-          <div>{`Antonio Colagreco ${getYear(dictionary.language)}`}</div>
-          <div>{`P.IVA 02349530689`}</div>
-        </div>
-        <PrivacyLinks className='flex items-start' dictionary={dictionary} />
-        <ScrollToTop dictionary={dictionary} />
+        <FooterInfo locale={lang} />
+        <PrivacyLinks className='flex items-start' locale={lang} />
+        <ScrollToTop locale={lang} />
       </div>
     </footer>
   )

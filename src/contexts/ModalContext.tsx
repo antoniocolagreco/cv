@@ -1,6 +1,6 @@
 'use client'
+import CloseIcon from '@/icons/CloseIcon';
 import { FC, ReactNode, createContext, useRef, useState } from 'react';
-import CloseIcon from '../icons/CloseIcon';
 
 export type ModalContent = { main: ReactNode; header?: ReactNode; footer?: ReactNode; closeIcon?: boolean }
 

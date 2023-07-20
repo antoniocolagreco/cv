@@ -52,10 +52,10 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
       >
         <figure className='flex justify-center relative'>
           <div className='rounded-lg shadow-lg overflow-hidden inline-block absolute left-0 top-0 shadow-[#00000044]'>
-            <Image width={224} height={317} src={backImageUrl} alt={backImageAlt} />
+            <Image width={224} height={317} src={`${backImageUrl}`} alt={backImageAlt} />
           </div>
           <div className='rounded-lg shadow-lg overflow-hidden inline-block relative mt-10 ml-10 shadow-[#00000033]'>
-            <Image width={224} height={317} src={frontImageUrl} alt={frontImageAlt} />
+            <Image width={224} height={317} src={`${frontImageUrl}`} alt={frontImageAlt} />
           </div>
         </figure>
       </Link>

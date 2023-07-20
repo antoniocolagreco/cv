@@ -17,7 +17,7 @@ export const SUPPORTED_LANGUAGES = ['en', 'it']
 
 const dictionaries: Record<string, typeof en> = { en, it }
 
-export const getDictionary = (locale: string): Dictionary => {
-  if (!dictionaries[locale]) notFound()
-  return dictionaries[locale]
+export const getDictionary = (lang: string): Dictionary => {
+  if (!dictionaries[lang]) notFound()
+  return dictionaries[lang]
 }

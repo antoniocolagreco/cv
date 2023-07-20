@@ -11,12 +11,12 @@ import { DEFAULT_LANGUAGE, getDictionary } from '@/dictionaries/dictionaries'
 import { DefaultPageProps, NextPage } from '@/types/next'
 import { Fragment } from 'react'
 
-export type HomePageProps = DefaultPageProps & { params?: { locale?: string } }
+export type HomePageProps = DefaultPageProps & { params?: { lang?: string } }
 
 const HomePage: NextPage<HomePageProps> = (props) => {
-  const { params: { locale = DEFAULT_LANGUAGE } = { locale: DEFAULT_LANGUAGE } } = props
+  const { params: { lang = DEFAULT_LANGUAGE } = { lang: DEFAULT_LANGUAGE } } = props
 
-  const dictionary = getDictionary(locale)
+  const dictionary = getDictionary(lang)
 
   return (
     <Fragment>

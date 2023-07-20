@@ -20,9 +20,9 @@ const Footer: FC<FooterProps> = (props) => {
       />
 
       <div className='relative text-sm sm:text-base bg-gradient-to-b from-sky-700 to-sky-800 flex flex-wrap justify-between px-4 pb-4 pt-0 sm:px-8 gap-4 items-end'>
-        <FooterInfo locale={lang} />
-        <PrivacyLinks className='flex items-start' locale={lang} />
-        <ScrollToTop locale={lang} />
+        <FooterInfo lang={lang} />
+        <PrivacyLinks className='flex items-start' lang={lang} />
+        <ScrollToTop lang={lang} />
       </div>
     </footer>
   )

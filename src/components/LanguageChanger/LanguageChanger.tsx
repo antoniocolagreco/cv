@@ -1,10 +1,13 @@
 'use client'
 import Switch, { SwitchOption, SwitchProps } from '@/components/Switch/Switch'
+import { suffix } from '@/utilities/suffixPath'
 import { usePathname } from 'next/navigation'
 import { FC } from 'react'
+import { SUPPORTED_LANGUAGES } from '../../dictionaries/dictionaries'
 
 const cleanURL = (pathname: string, locales: SwitchOption[]) => {
   let cleanPathname = pathname
+    .replace(suffix, '')
     .split('/')
     .filter((e) => e !== '' && !locales.some((e2) => e2.value === e))
     .join('/')
@@ -14,12 +17,13 @@ const cleanURL = (pathname: string, locales: SwitchOption[]) => {
   return cleanPathname
 }
 
-const LocaleChanger: FC<SwitchProps> = (props) => {
-  const { options, value, ...otherProps } = props
+const LanguageChanger: FC<Omit<SwitchProps, 'options'>> = (props) => {
+  const { value, ...otherProps } = props
   const pathname = usePathname()
 
-  if (!options) return
-
+  const options = SUPPORTED_LANGUAGES.map((lang) => {
+    return { value: lang, node: lang, href: `/${lang}` }
+  })
   const localizedOptions: SwitchOption[] = options.map((option) => {
     return { ...option, href: `/${option.value}${cleanURL(pathname, options)}` }
   })
@@ -27,4 +31,4 @@ const LocaleChanger: FC<SwitchProps> = (props) => {
   return <Switch {...otherProps} options={localizedOptions} value={value} />
 }
 
-export default LocaleChanger
+export default LanguageChanger

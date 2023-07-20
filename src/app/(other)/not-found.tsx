@@ -1,5 +1,8 @@
-import { DefaultPageProps, NextPage } from '@/types/next'
-import Underline from '../components/Underline/Underline'
+'use client'
+import { NextPage } from 'next'
+import Underline from '../../components/Underline/Underline'
+import { DefaultPageProps } from '../../types/next'
+import { suffix } from '../../utilities/suffixPath'
 
 type NotFoundProps = DefaultPageProps & {}
 
@@ -16,7 +19,7 @@ const NotFound: NextPage<NotFoundProps> = (props) => {
           <span className='text-xl'> | </span>
           <span className='text-xl'>No page here</span>
         </h1>
-        <a className='cursor-pointer' href={`/`}>
+        <a className='cursor-pointer' href={`${suffix}/`}>
           <Underline className='text-xl text-sky-700'>Home</Underline>
         </a>
       </div>

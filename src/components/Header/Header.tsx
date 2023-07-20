@@ -1,23 +1,29 @@
-'use client'
 import TopBackgroundCurve from '@/components/Decorations/TopBackgroundCurve'
 import DownloadLink from '@/components/DownloadLink/DownloadLink'
 import HomeLink from '@/components/HomeLink/HomeLink'
-import LocaleChanger from '@/components/LocaleChanger/LocaleChanger'
-import { SUPPORTED_LANGUAGES, getDictionary } from '@/dictionaries/dictionaries'
-import { usePathname } from 'next/navigation'
+import LanguageChanger from '@/components/LanguageChanger/LanguageChanger'
+import { getDictionary } from '@/dictionaries/dictionaries'
 import { FC, HTMLAttributes } from 'react'
 
-type HeaderProps = HTMLAttributes<HTMLElement> & { lang: string }
+type HeaderProps = HTMLAttributes<HTMLElement> & {
+  lang: string
+  homeLink?: boolean
+  downloadLink?: boolean
+  langSwitch?: boolean
+}
 
 const Header: FC<HeaderProps> = (props) => {
-  const { lang, children, className = '', ...otherProps } = props
-  const pathname: string = usePathname()
-  const dictionary = getDictionary(lang)
+  const {
+    langSwitch = false,
+    downloadLink = false,
+    homeLink = false,
+    lang,
+    children,
+    className = '',
+    ...otherProps
+  } = props
 
-  const homePages = SUPPORTED_LANGUAGES.map((l) => `/${l}`)
-  const locales = SUPPORTED_LANGUAGES.map((locale) => {
-    return { value: locale, node: locale, href: `/${locale}` }
-  })
+  const dictionary = getDictionary(lang)
 
   return (
     <header className={`relative px-4 sm:px-8 py-4 flex justify-end gap-4 ${className}`} {...otherProps} id='top'>
@@ -28,7 +34,7 @@ const Header: FC<HeaderProps> = (props) => {
         height='200px'
         width='100%'
       />
-      {(homePages?.includes(pathname) || pathname === '/') && (
+      {downloadLink && (
         <DownloadLink
           href={`/download/${dictionary.download_file_name}`}
           download={dictionary.download_file_name}
@@ -38,10 +44,8 @@ const Header: FC<HeaderProps> = (props) => {
           {dictionary.download_pdf}
         </DownloadLink>
       )}
-      {!homePages?.includes(pathname) && pathname !== '/' && <HomeLink href={`/${lang}`} />}
-      {(homePages?.includes(pathname) ||
-        (pathname && (pathname.includes('cookie-policy') || pathname.includes('privacy-policy'))) ||
-        pathname === '/') && <LocaleChanger value={lang} options={locales} className='relative' />}
+      {homeLink && <HomeLink href={`/${lang}`} />}
+      {langSwitch && <LanguageChanger value={lang} className='relative' />}
     </header>
   )
 }

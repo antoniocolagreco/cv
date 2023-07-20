@@ -3,9 +3,11 @@ const isProd = process.env.NODE_ENV === 'production'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  assetPrefix: isProd ? `${process.env.PUBLIC_URL}` : `${process.env.LOCAL_URL}`,
+  assetPrefix: isProd
+    ? `${process.env.NEXT_PUBLIC_URL}${process.env.NEXT_PUBLIC_SUFFIX}`
+    : `${process.env.NEXT_PUBLIC_LOCAL_URL}${process.env.NEXT_PUBLIC_LOCAL_SUFFIX}`,
   images: { unoptimized: true },
-  basePath: isProd ? `${process.env.PUBLIC_SUFFIX}` : `${process.env.LOCAL_SUFFIX}`,
+  basePath: isProd ? `${process.env.NEXT_PUBLIC_SUFFIX}` : `${process.env.NEXT_PUBLIC_LOCAL_SUFFIX}`,
   cleanDistDir: true,
 }
 

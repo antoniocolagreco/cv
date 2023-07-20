@@ -1,7 +1,7 @@
 import { DEFAULT_LANGUAGE } from '@/dictionaries/dictionaries'
 
-export const getYear = (locale: string | undefined) => {
-  const validLocale = locale || DEFAULT_LANGUAGE
-  const dateFormatter = Intl.DateTimeFormat(validLocale, { year: 'numeric' })
+export const getYear = (lang: string | undefined) => {
+  const validLanguage = lang || DEFAULT_LANGUAGE
+  const dateFormatter = Intl.DateTimeFormat(validLanguage, { year: 'numeric' })
   return dateFormatter.format(new Date())
 }

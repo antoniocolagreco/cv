@@ -4,12 +4,12 @@ import { getDictionary } from '@/dictionaries/dictionaries'
 import UpIcon from '@/icons/UpIcon'
 import { FC, HTMLAttributes, useEffect, useRef } from 'react'
 
-type ScrollToTopProps = HTMLAttributes<HTMLDivElement> & { locale: string }
+type ScrollToTopProps = HTMLAttributes<HTMLDivElement> & { lang: string }
 
 const ScrollToTop: FC<ScrollToTopProps> = (props) => {
-  const { locale, children, className = '', ...otherProps } = props
+  const { lang, children, className = '', ...otherProps } = props
   let headerElementRef = useRef<HTMLElement | null>()
-  const dictionary = getDictionary(locale)
+  const dictionary = getDictionary(lang)
 
   useEffect(() => {
     headerElementRef.current = document.getElementById('top')

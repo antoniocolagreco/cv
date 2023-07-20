@@ -8,6 +8,7 @@ type NotFoundProps = DefaultPageProps & {}
 
 const NotFound: NextPage<NotFoundProps> = (props) => {
   const { params, searchParams } = props
+
   return (
     <>
       <head>

@@ -11,7 +11,7 @@ const Education: FC<EducationProps> = (props) => {
 
   return (
     <section
-      className={`text-sky-50 rounded-none rounded-bl-3xl rounded-tr-[4rem] shrink-0 p-4 fill-teal-700 bg-gradient-to-tl from-teal-800 to-teal-600 sm:min-w-[23rem] cursor-default ${className}`}
+      className={`text-sky-50 rounded-none rounded-bl-3xl rounded-tr-[4rem] shrink-0 p-4 fill-teal-700 bg-gradient-to-tl from-teal-800 to-teal-600 w-full sm:w-[23rem] cursor-default ${className}`}
       {...otherProps}
     >
       <div className='flex items-center mb-2'>
@@ -25,7 +25,7 @@ const Education: FC<EducationProps> = (props) => {
           <ComputerIcon width={36} />
         </SimpleBadge>
         <div>
-          <div className='text-amber-400 text-sm sm:text-base capitalize'>{dictionary.educations_title}</div>
+          <div className='text-amber-400 text-sm sm:text-base capitalize '>{dictionary.educations_title}</div>
           <div className='text-neutral-200 text-xs sm:text-sm font-normal capitalize'>
             {dictionary.education_istitute}
           </div>

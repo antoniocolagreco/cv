@@ -10,7 +10,7 @@ const Contacts: FC<ContactsProps> = (props) => {
 
   return (
     <section
-      className={`text-sky-50 rounded-none rounded-bl-3xl rounded-tr-[4rem] shrink-0 p-4 fill-cyan-700 bg-gradient-to-tl from-cyan-800 to-cyan-600 w-auto lg:w-[23rem] cursor-default ${className}`}
+      className={`text-sky-50 rounded-none rounded-bl-3xl rounded-tr-[4rem] shrink-0 p-4 fill-cyan-700 bg-gradient-to-tl from-cyan-800 to-cyan-600 w-full sm:w-[23rem] cursor-default ${className}`}
       {...otherProps}
     >
       <div className='flex items-center mb-2'>

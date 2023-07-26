@@ -16,6 +16,7 @@ import TailwindIcon from '@/icons/Tailwind'
 import TimeIcon from '@/icons/TimeIcon'
 import TypescriptIcon from '@/icons/TypescriptIcon'
 import { FC, HTMLAttributes } from 'react'
+import ReduxIcon from '../../icons/Redux'
 
 type SkillsProps = HTMLAttributes<HTMLElement> & { dictionary: Dictionary }
 
@@ -51,14 +52,6 @@ const Skills: FC<SkillsProps> = (props) => {
           <JavascriptIcon className='fill-neutral-800' width={24} />
           Javascript
         </SkillBadge>
-        <SkillBadge className='border-orange-600 bg-white'>
-          <GitIcon className='fill-white' width={24} />
-          Git
-        </SkillBadge>
-        <SkillBadge className='border-sky-400 bg-white'>
-          <TailwindIcon className='fill-sky-400' width={24} />
-          Tailwind
-        </SkillBadge>
         <SkillBadge className='border-blue-600 bg-white'>
           <CSSIcon className='fill-blue-600' width={24} />
           CSS
@@ -66,6 +59,19 @@ const Skills: FC<SkillsProps> = (props) => {
         <SkillBadge className='border-orange-600 bg-white'>
           <HTMLIcon className='fill-orange-600' width={24} />
           HTML
+        </SkillBadge>
+        <SkillBadge className='border-violet-700'>
+          <ReduxIcon className='fill-violet-700' width={24} />
+          Redux
+        </SkillBadge>
+        <SkillBadge className='border-sky-400 bg-white'>
+          <TailwindIcon className='fill-sky-400' width={24} />
+          Tailwind CSS
+        </SkillBadge>
+
+        <SkillBadge className='border-orange-600 bg-white'>
+          <GitIcon className='fill-white' width={24} />
+          Git
         </SkillBadge>
         <SkillBadge className='border-sky-700 bg-white'>
           <ProblemSolvingIcon className='fill-sky-700' width={24} />

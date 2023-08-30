@@ -44,6 +44,14 @@ const Skills: FC<SkillsProps> = (props) => {
           <ReactIcon className='fill-cyan-500' width={24} />
           React
         </SkillBadge>
+        {/* <SkillBadge className='border-[#519f44] bg-white'>
+          <NodeIcon className='fill-[#519f44]' width={24} height={24} />
+          Node.js
+        </SkillBadge> */}
+        <SkillBadge className='border-sky-400 bg-white'>
+          <TailwindIcon className='fill-sky-400' width={24} />
+          Tailwind CSS
+        </SkillBadge>
         <SkillBadge className='border-sky-700 bg-white'>
           <TypescriptIcon className='fill-white' width={24} />
           Typescript
@@ -52,23 +60,18 @@ const Skills: FC<SkillsProps> = (props) => {
           <JavascriptIcon className='fill-neutral-800' width={24} />
           Javascript
         </SkillBadge>
-        <SkillBadge className='border-blue-600 bg-white'>
-          <CSSIcon className='fill-blue-600' width={24} />
-          CSS
+        <SkillBadge className='border-violet-700'>
+          <ReduxIcon className='fill-violet-700' width={24} />
+          Redux
         </SkillBadge>
         <SkillBadge className='border-orange-600 bg-white'>
           <HTMLIcon className='fill-orange-600' width={24} />
           HTML
         </SkillBadge>
-        <SkillBadge className='border-violet-700'>
-          <ReduxIcon className='fill-violet-700' width={24} />
-          Redux
+        <SkillBadge className='border-blue-600 bg-white'>
+          <CSSIcon className='fill-blue-600' width={24} />
+          CSS
         </SkillBadge>
-        <SkillBadge className='border-sky-400 bg-white'>
-          <TailwindIcon className='fill-sky-400' width={24} />
-          Tailwind CSS
-        </SkillBadge>
-
         <SkillBadge className='border-orange-600 bg-white'>
           <GitIcon className='fill-white' width={24} />
           Git

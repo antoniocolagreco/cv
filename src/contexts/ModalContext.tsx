@@ -62,6 +62,7 @@ const ModalContextProvider: FC<{ children: ReactNode }> = (props) => {
   }
 
   const hide = (e?: React.MouseEvent<HTMLElement>) => {
+    if (e?.target !== e?.currentTarget) return
     const overlay = overlayRef.current
     const backDrop = backDropRef.current
     const modal = modalRef.current
@@ -122,11 +123,11 @@ const ModalContextProvider: FC<{ children: ReactNode }> = (props) => {
               className='rounded-xl inline-flex items-center justify-center mr-4 transition-all absolute right-0 top-4 bg-neutral-100 cursor-pointer fill-neutral-300 hover:fill-neutral-400 w-10 h-10'
               onClick={hide}
             >
-              <CloseIcon width={30} height={30} />
+              <CloseIcon width={30} height={30} className='pointer-events-none' />
             </button>
           )}
           {header && <header className='relative p-4'>{header}</header>}
-          {main && <main className='overflow-scroll'>{main}</main>}
+          {main && <main className='overflow-y-scroll overflow-x-hidden'>{main}</main>}
           {footer && (
             <footer className='pl-4 sm:pl-8 pr-4 sm:pr-8 pb-4 flex flex-col gap-4 '>
               <hr className='border-t border-neutral-300 block w-full' />
